@@ -1,0 +1,10 @@
+Add ABOUT section
+    Add my pic in vertical in about
+Cube rotation correction
+Adjust project cards for more compatiblity with text and chips-tags
+Add footer
+    Have feedback form and contact more
+Add Resume route
+
+Resolve Error :
+    In Netlify when go to a specific route directly it show 404

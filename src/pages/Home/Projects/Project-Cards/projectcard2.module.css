@@ -1,0 +1,272 @@
+:root {
+    --use-gradient1: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    --use-gradient2: linear-gradient(101deg, rgb(81, 145, 213), rgb(211, 18, 151));
+    --use-gradient3: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+    --use-gradient4: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    --use-gradient5: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+    --use-gradient6: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+    --use-gradient7: linear-gradient(170deg, #231676 0%, #f538c3 74%);
+    --use-gradient8: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+    --use-gradient9: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
+    --use-gradient10: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    --use-gradient11: linear-gradient(315deg, #76daff 0%, #fcd000 74%);
+    --use-gradient12: linear-gradient(315deg, #94c997 0%, #daacec 74%);
+    --use-gradient13: linear-gradient(315deg, #d19592 0%, #c81f70 74%);
+}
+
+
+/* .project_body,
+.card,
+.project_textArea,
+.project_chipsArea,
+.project_linkArea,
+.project_innerBody {
+    border: 1px solid hsl(0, 100%, 50%, 0.3);
+} */
+
+.project_body {
+    perspective: 1100px;
+    width: 100%;
+    min-height: 66vh;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    transform-style: preserve-3d;
+    display: inline-block;
+    height: 40vh;
+    width: 50%;
+    font-size: 2rem;
+    position: relative;
+    border-radius: 1em;
+    /* overflow: hidden; */
+    transition: transform 250ms ease-in-out;
+}
+
+.card:nth-child(odd) {
+    transform: rotateY(15deg) scale(0.95);
+}
+
+.card:nth-child(even) {
+    transform: rotateY(-15deg) scale(0.95);
+}
+
+.card:nth-child(odd):hover {
+    transform: rotateY(0deg) scale(1);
+}
+
+.card:nth-child(even):hover {
+    transform: rotateY(0deg) scale(1);
+}
+
+.card::before {
+    border-radius: 1em;
+    /* background-image: url(data:image/png;base64,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); */
+
+    backdrop-filter: blur(20px);
+    content: '';
+    transform: translateX(-50%);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.card:nth-child(odd)::before {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0));
+}
+
+.card:nth-child(even)::before {
+    background: linear-gradient(270deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0));
+}
+
+.card::after {
+    content: "";
+    border-radius: 1em;
+    position: absolute;
+    inset: 0.5em;
+    padding: 1.5px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.card:nth-child(odd)::after {
+    background-image: linear-gradient(36deg,
+            rgb(255, 255, 255, 0.5),
+            rgb(255, 255, 255, 0),
+            rgb(255, 72, 219, 0),
+            rgb(255, 72, 219, 0.2));
+}
+
+.card:nth-child(even)::after {
+    background-image: linear-gradient(216deg,
+            rgb(255, 255, 255, 0.5),
+            rgb(255, 255, 255, 0),
+            rgb(255, 72, 219, 0),
+            rgb(255, 72, 219, 0.2));
+}
+
+.project_heading {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-family: 'Quantico', gotham, 'gotham';
+    position: absolute;
+    left: 1.4em;
+    top: 0px;
+    transform: translateY(-50%);
+    text-shadow: 2px 5px 2px hsla(0, 1%, 30%, 0.5);
+    z-index: 2;
+}
+
+.vertical_seperator {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* -------------------------------------------------------- */
+
+
+.project_textArea,
+.project_chipsArea,
+.project_linkArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project_textArea {
+    width: 100%;
+    flex-grow: 3;
+    border-radius: 1em;
+}
+
+.project_chipsArea {
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 1em;
+}
+
+.project_linkArea {
+    width: 100%;
+    border-radius: 1em;
+    flex-grow: 1;
+}
+
+/* -------------------------------------------------------- */
+
+.project_linkArea {
+    position: relative;
+    z-index: 100;
+}
+
+/* .project_site {} */
+
+/* .project_git {} */
+
+.project_innerBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    padding: 0.5em;
+}
+
+.project_text {
+    font-family: 'rajdhani';
+    margin: 0;
+    border-radius: 1em;
+    position: relative;
+    color: wheat;
+    text-align: center;
+    font-size: 0.5em;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+
+
+
+/* -------------------------------------------------------- */
+
+@media (max-width:1000px) {
+    .project_body {
+        flex-direction: column;
+        margin-bottom: 7em;
+    }
+
+    .card {
+        width: 70%;
+    }
+}
+
+@media (max-width:780px) {
+    .card {
+        width: 80%;
+    }
+
+    .chips-render {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width:630px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------------------- */
+
+
+
+
+@font-face {
+    font-family: 'sf-mono';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../../assests/fonts/sf-mono/SFMonoRegular.woff') format('woff');
+}
+
+.chips-render {
+    padding: 0.5em 1em !important;
+    font-family: 'sf-mono' !important;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0em 0.2em;
+    color: rgb(255, 255, 255) !important;
+    font-size: 1em;
+    font-weight: 100;
+    position: relative;
+    border: unset !important;
+}
+
+.chips-render::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 2em;
+    padding: 1.5px;
+    background-image: var(--use-gradient2);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}

@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import classes from './App.module.css';
+import 'bootstrap'
+import Home from './pages/Home/Home';
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+import NotFound from './pages/NotFound/NotFound';
+import NavBar from './components/NavBar/NavBar';
+import ParticlesJS from './components/ParticlesJS/ParticlesJS';
+import Notice from './pages/Notice/Notice';
+// import Ccursor from './components/Ccursor/Ccursor';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <BrowserRouter>
+            <div className={classes.App}>
+                {/* <Ccursor /> */}
+                <ParticlesJS />
+                <NavBar />
+                <Routes>
+                    <Route exact path='/' element={<Navigate replace to='/notice' />} />
+                    <Route exact path='/home' element={<Home />} />
+                    <Route exact path='/notice' element={<Notice />} />
+                    <Route path='*' element={<NotFound />} />
+                </Routes>
+            </div >
+        </BrowserRouter>
+    );
 }
 
 export default App;

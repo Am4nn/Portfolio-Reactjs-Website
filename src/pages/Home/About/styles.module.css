@@ -1,0 +1,15 @@
+.aboutHeading {
+    font-family: 'Quantico', gotham, 'gotham';
+    color: #00e5ff;
+    font-size: 2.3em;
+    font-weight: 500;
+    padding-top: 10px;
+    margin-bottom: 5rem;
+}
+
+.aboutSection {
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 30px;
+    height: auto;
+}

@@ -1,0 +1,102 @@
+.child {
+    width: 100%;
+}
+
+.container {
+    position: fixed;
+}
+
+.dragCloseBtn {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: hsl(348, 83%, 80%);
+    box-shadow: 0px 0px 4px 2px hsl(0, 28%, 62%);
+    z-index: 3;
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: all 300ms ease-in-out;
+}
+
+.dragCloseBtn:hover {
+    background-color: hsl(348, 83%, 75%);
+    cursor: pointer;
+}
+
+.drag {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    min-width: 200px;
+    min-height: 200px;
+    width: 400px;
+    margin: 20px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1em;
+    box-shadow: 0px 0px 4px 2px hsl(0, 0%, 40%);
+    resize: both;
+    overflow: hidden;
+    transition: background-color 300ms ease-in-out,
+        min-height 300ms ease-in-out,
+        border-radius 300ms ease-in-out,
+        opacity 300ms ease-in-out;
+
+    animation: fadeAwayInverse 300ms ease-in-out forwards;
+}
+
+.moveIt {
+    font-family: cursive;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.221);
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.drag:hover {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.dragToolKit {
+    opacity: 1;
+    /* transition: all 300ms ease-in-out; */
+}
+
+.hiddenDrag {
+    animation: fadeAway 300ms ease-in-out forwards;
+}
+
+@keyframes fadeAway {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes fadeAwayInverse {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

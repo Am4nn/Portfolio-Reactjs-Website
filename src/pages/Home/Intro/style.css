@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+
+.mytextcolorwhite {
+    color: white;
+}
+
+.myname {
+    font-family: 'Quantico', gotham, 'gotham';
+    text-transform: uppercase;
+    font-size: calc((24 / 16) * 1rem);
+    letter-spacing: 0.3em;
+    color: #00e5ff;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.4rem;
+}
+
+.section {
+    height: 100vh;
+    flex: 1 0 auto;
+    position: relative;
+    width: 100%;
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+
+.who_am_I {
+    font-family: Cinzel;
+}
+
+.has-first-color {
+    color: var(--primary-color);
+}
+
+.btn-portfolio {
+    background: var(--primary-color);
+    border-radius: 0;
+}
+
+.btn-portfolio a {
+    color: #000;
+    text-decoration: none;
+}
+
+.btn-about a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.intro_sec {
+    min-height: 700px;
+    height: 100vh;
+}
+
+@media (max-width:991.98px) {
+    .intro_sec {
+        display: block;
+    }
+}
+
+@media (max-width:991.98px) {
+    .intro_sec .intro {
+        max-width: 700px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.intro_sec .intro .feature .wrap-icon {
+    background: 0 0 !important;
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.intro_sec .intro .feature .wrap-icon svg {
+    color: #5cccc9;
+}
+
+.intro_sec h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+.intro_sec h3 {
+    font-family: 'Raleway', gotham;
+    font-size: 13px !important;
+    letter-spacing: 2.7px;
+    margin-bottom: 50px;
+    color: rgba(245, 245, 245, 0.6);
+    text-transform: uppercase;
+    opacity: 0;
+    animation: h3Anim 3s ease-in-out 400ms forwards;
+}
+
+@keyframes h3Anim {
+    to {
+        opacity: 1;
+    }
+}
+
+.intro_sec h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ac_btn {
+    padding: 4px 19px;
+    color: white;
+    position: relative;
+    border: white 2px solid;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    border-radius: 0;
+    margin-right: 20px;
+    /* cursor: none; */
+}
+
+.ac_btn a {
+    text-decoration: none;
+}
+
+.ac_btn:hover {
+    box-shadow: 8px 8px 0px white, -8px -8px 0px white;
+}
+
+.ac_btn:hover .one {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.ac_btn:hover .two {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.ac_btn:hover .three {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.ac_btn:hover .four {
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.ac_btn .ring {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    transform: translate3d(0px, 90px, 0px);
+}
+
+.ac_btn .one {
+    background-color: #000;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -4;
+}
+
+.ac_btn .two {
+    background-color: var(--primary-color);
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+.ac_btn .three {
+    background-color: var(--secondary-color);
+    transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -3;
+}
+
+:root {
+    --bg-color: #0c0c0c;
+    --primary-color: #0d0d0d;
+    --secondary-color: #fff;
+    --text-color: #fff;
+    --text-color-2: #fff;
+    --overlay-color: rgb(12 12 12 / 63%);
+}
+
+#button_p {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#button_h:hover {
+    color: var(--primary-color)
+}
+
+.intro_sec .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.p {
+    font-family: 'Rajdhani', gotham;
+    font-weight: 200;
+    max-width: 700px;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
