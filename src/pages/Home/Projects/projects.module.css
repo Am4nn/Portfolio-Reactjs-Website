@@ -68,10 +68,20 @@
         top 200ms ease-in-out,
         color 200ms ease-in-out,
         background-color 200ms ease-in-out;
+    white-space: nowrap;
 }
 
-.loadMore:hover {
+.loadMore:hover,
+.loadMore:focus {
     color: hsl(228, 50%, 10%);
     background-color: rgba(255, 255, 255, 0.7);
     top: -0.6rem;
+}
+
+@media (max-width:700px) {
+    .loadMore {
+        font-size: 1.4em;
+        margin: 0;
+        padding: 0.1em 1.5em;
+    }
 }

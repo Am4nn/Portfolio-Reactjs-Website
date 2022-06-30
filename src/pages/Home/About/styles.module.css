@@ -1,14 +1,16 @@
+.about {
+    margin-top: 0.5rem;
+}
+
 .aboutHeading {
     text-transform: uppercase;
     font-family: 'Quantico', gotham, 'gotham';
-    color: #00e5ff;
+    /* color: #00e5ff; */
     font-size: 5em;
     font-weight: 500;
     padding-top: 10px;
     margin-bottom: 5rem;
     letter-spacing: 0.1em;
-
-    /* text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, .25); */
     background: linear-gradient(25deg, #ff0000 10%, #00e5ff 74%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -25,7 +27,6 @@
     top: -0.3em;
 }
 
-
 .aboutHeading::first-letter {
     font-size: 1.7em;
 }
@@ -41,10 +42,8 @@
     }
 }
 
-
 .aboutSection {
     position: relative;
-    padding-top: 7rem;
-    padding-bottom: 30px;
     height: auto;
+    padding: 7rem 1.5rem 3rem 1.5rem;
 }
