@@ -1,11 +1,46 @@
 .aboutHeading {
+    text-transform: uppercase;
     font-family: 'Quantico', gotham, 'gotham';
     color: #00e5ff;
-    font-size: 2.3em;
+    font-size: 5em;
     font-weight: 500;
     padding-top: 10px;
     margin-bottom: 5rem;
+    letter-spacing: 0.1em;
+
+    /* text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, .25); */
+    background: linear-gradient(25deg, #ff0000 10%, #00e5ff 74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.aboutHeading::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 80%;
+    background-image: linear-gradient(-25deg, #ff0000 10%, #00e5ff 74%);
+    top: -0.3em;
+}
+
+
+.aboutHeading::first-letter {
+    font-size: 1.7em;
+}
+
+@media (max-width:700px) {
+    .aboutHeading {
+        font-size: 2.4em;
+        margin-bottom: 3rem;
+    }
+
+    .aboutHeading::after {
+        width: 100%;
+    }
+}
+
 
 .aboutSection {
     position: relative;

@@ -5,6 +5,8 @@
 }
 
 .myname {
+    overflow: hidden;
+    white-space: nowrap;
     font-family: 'Quantico', gotham, 'gotham';
     text-transform: uppercase;
     font-size: calc((24 / 16) * 1rem);
@@ -89,7 +91,7 @@
     font-family: 'Raleway', gotham;
     font-size: 13px !important;
     letter-spacing: 2.7px;
-    margin-bottom: 50px;
+    margin-bottom: 3.5rem;
     color: rgba(245, 245, 245, 0.6);
     text-transform: uppercase;
     opacity: 0;
@@ -197,6 +199,7 @@
     align-items: center;
     width: 100%;
     margin: 0 auto;
+    /* margin: 3rem auto 0; */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -207,4 +210,101 @@
     max-width: 700px;
     letter-spacing: 0.2rem;
     margin-bottom: 2rem;
+}
+
+.mypic {
+    position: relative;
+    display: block;
+    margin-bottom: 3.5rem;
+    height: calc(5vw + 5vh + 5vmin);
+    width: calc(5vw + 5vh + 5vmin);
+    border-radius: 500px;
+    background: url('/src/assests/Images/mypic.jpg') center center no-repeat;
+    background-size: cover;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 23%), 0 3px 12px rgb(0 0 0 / 16%);
+    transition: box-shadow .3s ease-in-out;
+    animation-name: bounceIn;
+    animation-iteration-count: 1s;
+    animation-duration: .9s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.mypic.pulse:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid rgba(250, 250, 250, 0.1);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out 0s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
 }

@@ -1,4 +1,4 @@
-import Transition from '../Transition/Transition';
+// import Transition from '../Transition/Transition';
 import { useReducedMotion, useSpring } from 'framer-motion';
 import { useInViewport } from '../../hooks/useInViewport';
 import { useWindowSize } from '../../hooks/useWindowSize';
@@ -207,23 +207,40 @@ const DisplacementSphere = props => {
     setOpacity(1);
   }, []);
 
+  // return (
+  //   <div className={styles.displacementSphere}>
+  //     <Transition in timeout={3000}>
+  //       {visible => (
+  //         <canvas
+  //           style={{
+  //             transform: `translateY(${offsetY * 0.5}px)`,
+  //             opacity: `${opacity}`
+  //           }}
+  //           aria-hidden
+  //           className={styles.canvas}
+  //           data-visible={visible}
+  //           ref={canvasRef}
+  //           {...props}
+  //         />
+  //       )}
+  //     </Transition>
+  //   </div>
+  // );
+
+
+
   return (
     <div className={styles.displacementSphere}>
-      <Transition in timeout={3000}>
-        {visible => (
-          <canvas
-            style={{
-              transform: `translateY(${offsetY * 0.5}px)`,
-              opacity: `${opacity}`
-            }}
-            aria-hidden
-            className={styles.canvas}
-            data-visible={visible}
-            ref={canvasRef}
-            {...props}
-          />
-        )}
-      </Transition>
+      <canvas
+        style={{
+          transform: `translateY(${offsetY * 0.5}px)`,
+          opacity: `${opacity}`
+        }}
+        aria-hidden
+        className={styles.canvas}
+        ref={canvasRef}
+        {...props}
+      />
     </div>
   );
 };

@@ -67,7 +67,7 @@ function ParticlesJS() {
                     number: {
                         density: {
                             enable: true,
-                            area: 700,
+                            area: 600,
                         },
                         value: 50,
                     },

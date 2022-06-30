@@ -23,6 +23,7 @@ const Intro = () => {
         <section id="home" className="section">
             <div className="intro_sec d-flex align-items-center ">
                 <div className="intro mx-auto">
+                    {/* <div className='mypic pulse' /> */}
                     <h1 className='myname mb-1x'>
                         <DecoderText text={data.title} delay={300} />
                     </h1>

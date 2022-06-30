@@ -17,10 +17,8 @@ const Notice = () => {
                 <ul className={classes.p}>
                     <li>Add ABOUT section</li>
                     <li> Add my pic in vertical in about</li>
-                    <li> Cube rotation correction</li>
-                    <li> Adjust project cards for more compatiblity with text and chips-tags</li>
                     <li>Add footer</li>
-                    <li>Have feedback form and contact more</li>
+                    <li>Have feedback form and contact me</li>
                     <li>Add Resume route</li>
                 </ul>
 

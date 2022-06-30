@@ -20,21 +20,21 @@ export const all_projects = [
     {
         imgs: project_images, title: 'Super Mario',
         description: 'A game made using c++ and SFML lib. A game made using c++ and SFML lib.  A game made using c++ and SFML lib.',
-        tech: ['C++', 'SFML'],
+        tech: ['C++', 'SFML', 'OPENGL', 'GLSL'],
         github: 'https://github.com/Am4nn/Super-Mario-SFML',
         site: '/',
         key: 0
     },
     {
         imgs: project_images, title: 'Super Mario',
-        description: 'A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib ',
+        description: 'A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib ',
         tech: ['C++', 'SFML', 'JS', 'HTML', 'CSS', 'EXPRESS.JS', 'REACT.JS', 'THREE.JS'],
         github: 'https://github.com/Am4nn/Super-Mario-SFML',
         key: 1
     },
     {
         imgs: project_images, title: 'Super Mario',
-        description: 'A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib ',
+        description: 'A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib A game made using c++ and SFML lib ',
         tech: ['C++', 'SFML', 'MONGODB'],
         site: '/', key: 2
     },

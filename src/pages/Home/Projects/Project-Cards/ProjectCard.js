@@ -1,39 +1,73 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import { BiLinkExternal } from "react-icons/bi";
-import { AiFillGithub } from 'react-icons/ai'
-import { Chip } from '@mui/material'
-import './projectCard.css';
+import React, { Fragment } from 'react'
+import Cube from '../../../../components/Cube/Cube'
+import classes from './projectcard.module.css'
+import { useMediaQuery } from 'react-responsive'
 
 /*
- props.data = {
-    img, title, description, tech[], site, github
- }
+    projects = {
+        imgs, title, description, tech[], site, github
+    }
 */
+// imgs = [front, back,  right, left, top, bottom]
 
-function ProjectCards(props) {
-    const { data } = props;
+const DotCard = props => {
+    const { project } = props;
+
     return (
-        <div className="project-card">
-            <Card className="project-card-view">
-                <Card.Img className="card-img" variant="top" src={data.img} alt="card-img" />
-                <Card.Body>
-                    <Card.Title className="card-title">{data.title}</Card.Title>
-                    <Card.Text style={{ textAlign: "center" }}>
-                        {data.description}
-                    </Card.Text>
-                    <Card.Subtitle>
-                        {data.tech.map((text, index) =>
-                            <Chip key={index} className='chips-render' label={text} variant="outlined" />
-                        )}
-                    </Card.Subtitle>
-                    <Card.Body>
-                        {data.site && <Card.Link className='card-link' href={data.site}><BiLinkExternal /> Visit Site</Card.Link>}
-                        {data.github && <Card.Link className='card-link' href={data.github}><AiFillGithub /> GitHub</Card.Link>}
-                    </Card.Body>
-                </Card.Body>
-            </Card>
+        <div className={classes.card}>
+            <h1 className={classes.project_heading}> {project.title} </h1>
+
+            <div className={classes.project_innerBody}>
+
+                <div className={classes.project_textArea}>
+                    <p className={classes.project_text}>{project.description}</p>
+                </div>
+
+                {/* <div className={classes.vertical_seperator} /> */}
+
+                <div className={classes.project_chipsArea}>
+                    {project.tech.map((text, index) =>
+                        <div key={index}  className={classes['chips-render']}>{text}</div>
+                    )}
+                </div>
+
+                {/* <div className={classes.vertical_seperator} /> */}
+
+                <div className={classes.project_linkArea}>
+                    {project.site && <a className={`${classes.project_site} ${classes.project_link}`} href={project.site}>Website</a>}
+                    {project.github && <a className={`${classes.project_git} ${classes.project_link}`} href={project.github}>Github</a>}
+                </div>
+            </div>
         </div>
     );
 }
-export default ProjectCards;
+
+const ProjectCard2 = props => {
+    const { project } = props;
+
+    const isMobile = useMediaQuery({
+        query: '(max-width:1000px)'
+    })
+
+    const pattern1 = (
+        <Fragment>
+            <Cube images={project.imgs} />
+            <DotCard project={project} />
+        </Fragment>
+    );
+
+    const pattern2 = (
+        <Fragment>
+            <DotCard project={project} />
+            <Cube images={project.imgs} />
+        </Fragment>
+    );
+
+    return (
+        <div className={classes.project_body}>
+            {(isMobile || project.key % 2 === 0) ? pattern1 : pattern2}
+        </div >
+    );
+}
+
+export default ProjectCard2;
