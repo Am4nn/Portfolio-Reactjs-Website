@@ -3,8 +3,6 @@
     src: url('./assests/fonts/gotham-medium.woff2');
 }
 
-@import url('http://fonts.cdnfonts.com/css/gotham');
-
 :root {
     scroll-behavior: smooth !important;
 }

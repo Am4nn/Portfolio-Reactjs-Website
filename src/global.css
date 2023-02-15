@@ -1,3 +1,25 @@
 :root {
     --background-universal: rgb(18, 18, 18);
+
+    --use-gradient1: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    --use-gradient2: linear-gradient(101deg, #5191d5, #d31297);
+    --use-gradient3: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+    --use-gradient4: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    --use-gradient5: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+    --use-gradient6: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+    --use-gradient7: linear-gradient(170deg, #231676 0%, #f538c3 74%);
+    --use-gradient8: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+    --use-gradient9: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%);
+    --use-gradient10: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    --use-gradient11: linear-gradient(315deg, #76daff 0%, #fcd000 74%);
+    --use-gradient12: linear-gradient(315deg, #94c997 0%, #daacec 74%);
+    --use-gradient13: linear-gradient(315deg, #d19592 0%, #c81f70 74%);
+    --use-gradient14: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+    --use-gradient15: linear-gradient(315deg, #bdd8fe 0%, #e186b4 74%);
+    --use-gradient16: linear-gradient(315deg, #fbbc95 0%, #fddac5 74%);
+    --use-gradient17: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+    --use-gradient18: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
+    --use-gradient19: linear-gradient(315deg, #fabf61 0%, #ffdd00 74%);
+    --use-gradient20: linear-gradient(319deg, #f2dd6e 0%, #cff27e 37%, #ef959d 100%);
+    --use-gradient21: linear-gradient(25deg, #ff0000 10%, #00e5ff 74%);
 }
