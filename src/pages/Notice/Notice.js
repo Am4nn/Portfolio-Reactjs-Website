@@ -13,7 +13,7 @@ const Notice = () => {
                 <h1 className={classes.h1}>
                     Website Is Still In Development
                 </h1>
-                <h2 className={classes.h2}>Things you will be seeing in website soon (TODO)</h2>
+                <h2 className={classes.h2}>---------------TODO---------------</h2>
                 <ul className={classes.p}>
                     <li>Add ABOUT section</li>
                     <li> Add my pic in vertical in about</li>

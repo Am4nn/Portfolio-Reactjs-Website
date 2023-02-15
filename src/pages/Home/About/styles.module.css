@@ -5,7 +5,6 @@
 .aboutHeading {
     text-transform: uppercase;
     font-family: 'Quantico', gotham, 'gotham';
-    /* color: #00e5ff; */
     font-size: 5em;
     font-weight: 500;
     padding-top: 10px;
@@ -42,8 +41,47 @@
     }
 }
 
+/* -------------------------------------------- */
+
 .aboutSection {
+    z-index: 2;
     position: relative;
-    height: auto;
+    text-align: center;
     padding: 7rem 1.5rem 3rem 1.5rem;
 }
+
+.aboutMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutText {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .textHere {} */
+
+.aboutPic {
+    object-fit: contain;
+    height: 100%;
+}
+
+.aboutPic img {
+    width: 50%;
+}
+
+/* -------------------------------------------- */
+
+/* .aboutSection,
+.aboutMain,
+.aboutText,
+.aboutPic {
+    border: 1px solid rgb(255, 178, 36);
+} */
+
+/* -------------------------------------------- */

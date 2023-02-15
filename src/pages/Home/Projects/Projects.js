@@ -29,7 +29,7 @@ const Projects = () => {
     }
 
     return (
-        <div id='projects' className={classes.projects}>
+        <section id='projects' className={classes.projects}>
             <div className={classes.projectSection}>
                 <h1 className={classes.projectHeading}>
                     <strong>My Projects</strong>
@@ -55,7 +55,7 @@ const Projects = () => {
                 }
                 <div aria-hidden id='projectsEnd' />
             </div>
-        </div>
+        </section>
     )
 }
 

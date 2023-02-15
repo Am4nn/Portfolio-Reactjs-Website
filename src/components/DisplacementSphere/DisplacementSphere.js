@@ -30,6 +30,8 @@ const springConfig = {
   mass: 2,
 };
 
+const backgroundColor = { r: 18, g: 18, b: 18 };
+
 const DisplacementSphere = props => {
   const start = useRef(Date.now());
   const canvasRef = useRef();
@@ -103,7 +105,7 @@ const DisplacementSphere = props => {
     dirLight.position.y = 100;
 
     lights.current = [dirLight, ambientLight];
-    scene.current.background = new Color(17 / 255, 17 / 255, 17 / 255);
+    scene.current.background = new Color(backgroundColor.r / 255, backgroundColor.g / 255, backgroundColor.b / 255);
     lights.current.forEach(light => scene.current.add(light));
 
     return () => {
@@ -194,8 +196,8 @@ const DisplacementSphere = props => {
 
   // for using Scrollax Effect
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
   useEffect(() => {
+    const handleScroll = () => setOffsetY(window.pageYOffset);
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -233,7 +235,7 @@ const DisplacementSphere = props => {
     <div className={styles.displacementSphere}>
       <canvas
         style={{
-          transform: `translateY(${offsetY * 0.5}px)`,
+          transform: `translateY(${offsetY * 0.6}px)`,
           opacity: `${opacity}`
         }}
         aria-hidden

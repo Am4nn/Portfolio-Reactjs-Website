@@ -37,7 +37,6 @@ const NavBar = () => {
                                 onClick={() => setExpand(false)}
                                 className='myNavLink'
                             >
-                                {/* <AiOutlineHome style={{ marginBottom: "2px" }} />&nbsp; */}
                                 Home
                             </Nav.Link>
                         </Nav.Item>
@@ -49,7 +48,6 @@ const NavBar = () => {
                                 onClick={() => setExpand(false)}
                                 className='myNavLink'
                             >
-                                {/* <AiOutlineUser style={{ marginBottom: "2px" }} />&nbsp; */}
                                 About
                             </Nav.Link>
                         </Nav.Item>
@@ -61,7 +59,6 @@ const NavBar = () => {
                                 onClick={() => setExpand(false)}
                                 className='myNavLink'
                             >
-                                {/* <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />&nbsp; */}
                                 Projects
                             </Nav.Link>
                         </Nav.Item>
@@ -73,7 +70,6 @@ const NavBar = () => {
                                 onClick={() => setExpand(false)}
                                 className='myNavLink'
                             >
-                                {/* <CgFileDocument style={{ marginBottom: "2px" }} />&nbsp; */}
                                 Resume
                             </Nav.Link>
                         </Nav.Item>

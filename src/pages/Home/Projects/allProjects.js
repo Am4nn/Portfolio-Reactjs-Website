@@ -1,4 +1,9 @@
-import mario from '../../../assests/Images/mario.png'
+import m1 from '../../../assests/Images/mario/mario1.png'
+import m2 from '../../../assests/Images/mario/mario2.png'
+import m3 from '../../../assests/Images/mario/mario3.png'
+import m4 from '../../../assests/Images/mario/mario4.png'
+import m5 from '../../../assests/Images/mario/mario5.png'
+import m6 from '../../../assests/Images/mario/mario6.png'
 
 /*
  myProjects[x] = {
@@ -8,12 +13,12 @@ import mario from '../../../assests/Images/mario.png'
 
 // imgs = [front, back,  right, left, top, bottom]
 const project_images = [
-    <img src={mario} alt='could not load img'></img>,
-    <img src={mario} alt='could not load img'></img>,
-    <img src={mario} alt='could not load img'></img>,
-    <img src={mario} alt='could not load img'></img>,
-    <img src={mario} alt='could not load img'></img>,
-    <img src={mario} alt='could not load img'></img>
+    <img src={m1} alt='could not load img'></img>,
+    <img src={m2} alt='could not load img'></img>,
+    <img src={m3} alt='could not load img'></img>,
+    <img src={m4} alt='could not load img'></img>,
+    <img src={m5} alt='could not load img'></img>,
+    <img src={m6} alt='could not load img'></img>
 ]
 
 export const all_projects = [

@@ -39,10 +39,10 @@ const Intro = () => {
                         />
                     </h1>
                     <p className="mytextcolorwhite mb-1x p">{data.description}</p>
-                    <div className="intro_btn-action">
-                        <Link to="/portfolio" className="text_2">
+                    <div>
+                        <Link to="/resume">
                             <div id="button_p" className="ac_btn btn">
-                                My Portfolio
+                                <span className="btn_text">My Resume</span>
                                 <div className="ring one"></div>
                                 <div className="ring two"></div>
                                 <div className="ring three"></div>
@@ -50,7 +50,7 @@ const Intro = () => {
                         </Link>
                         <Link to="/contact">
                             <div id="button_h" className="ac_btn btn">
-                                Contact Me
+                                <span className="btn_text">Contact Me</span>
                                 <div className="ring one"></div>
                                 <div className="ring two"></div>
                                 <div className="ring three"></div>
