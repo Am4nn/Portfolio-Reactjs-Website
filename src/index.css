@@ -15,7 +15,9 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--background-universal) !important;
+
+    background: linear-gradient(176deg, rgb(18, 24, 27) 50%, rgb(32, 39, 55) 100%) !important;
+    min-height: 100vh;
 }
 
 code {

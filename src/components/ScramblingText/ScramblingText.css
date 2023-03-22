@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.scramblingText_text {
+    font-family: 'Poppins', sans-serif;
+    color: #FAFAFA;
+}
+
+.scramblingText_dud {
+    /* font-family: 'ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, Hiragino Sans, Osaka, メイリオ, Meiryo, Segoe UI, sans-serif'; */
+    color: #757575d0;
+}
