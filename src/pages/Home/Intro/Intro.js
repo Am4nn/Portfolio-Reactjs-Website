@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import Typewriter from 'typewriter-effect'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import DecoderText from '../../../components/DecoderText/DecoderText'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./style.css"
