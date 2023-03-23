@@ -86,7 +86,7 @@ const DecoderText = memo(
             return () => {
                 unsubscribeSpring?.();
             };
-        }, [decoderSpring, reduceMotion, start, startDelay, text]);
+        }, [decoderSpring, reduceMotion, start, startDelay, text, eachCharClass]);
 
         return (
             <span className={classes(styles.text, className)} {...rest}>
