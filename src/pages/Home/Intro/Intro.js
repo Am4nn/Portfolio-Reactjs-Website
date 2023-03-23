@@ -8,13 +8,12 @@ import ScramblingText from './../../../components/ScramblingText/ScramblingText'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const data = {
-    title: "I’m Aman Arya",
     skill: "MERN and Full Stack Developer",
     animated: [
-        "I code websites trying to implement new features",
-        "CPP and JavaScript are my Favs",
-        "I love coding ",
-        "I also love coding games",
+        "Programmer",
+        "Gamer",
+        "Developer",
+        "Tech Enthusiast"
     ],
     description: "I'm a tech enthusiastic person who loves and live to code. I work hard each and every day to expertise my skills and develop new skills.",
     img_url: "",
@@ -32,36 +31,39 @@ const Intro = () => {
     }, []);
 
     const children = [
-        <h1 className='myname mb-1x'>
-            <DecoderText text={data.title} delay={250} />
+        <div style={{ paddingBottom: 15 }} className="hithere font-2-4">
+            Hi There!
+        </div>,
+        <h1 className='myname mb-1x font-2-4'>
+            <DecoderText text="I’m Aman Arya" eachCharClass="namechar" delay={250} />
         </h1>,
 
         <h3>{data.skill}</h3>,
 
-        <h1 className="mytextcolorwhite fluidz-48 mb-5" style={{ fontWeight: 500 }}>
+        <div className="mytextcolorwhite fluidz-48 mb-5 font-2-4" style={{ fontWeight: 500 }}>
             <ScramblingText data={data.animated} delay={1500} />
-        </h1>,
+        </div>,
 
-        <p className="mytextcolorwhite mb-1x p">{data.description}</p>,
+        // <p className="mytextcolorwhite mb-1x p">{data.description}</p>,
 
-        <div>
-            <Link to="/resume">
-                <div id="button_p" className="ac_btn btn">
-                    <span className="btn_text">My Resume</span>
-                    <div className="ring one"></div>
-                    <div className="ring two"></div>
-                    <div className="ring three"></div>
-                </div>
-            </Link>
-            <Link to="/contact">
-                <div id="button_h" className="ac_btn btn">
-                    <span className="btn_text">Contact Me</span>
-                    <div className="ring one"></div>
-                    <div className="ring two"></div>
-                    <div className="ring three"></div>
-                </div>
-            </Link>
-        </div>
+        // <div>
+        //     <Link to="/resume">
+        //         <div id="button_p" className="ac_btn btn">
+        //             <span className="btn_text">My Resume</span>
+        //             <div className="ring one"></div>
+        //             <div className="ring two"></div>
+        //             <div className="ring three"></div>
+        //         </div>
+        //     </Link>
+        //     <Link to="/contact">
+        //         <div id="button_h" className="ac_btn btn">
+        //             <span className="btn_text">Contact Me</span>
+        //             <div className="ring one"></div>
+        //             <div className="ring two"></div>
+        //             <div className="ring three"></div>
+        //         </div>
+        //     </Link>
+        // </div>
     ];
 
     return (
@@ -81,4 +83,4 @@ const Intro = () => {
     )
 }
 
-export default Intro
+export default Intro;

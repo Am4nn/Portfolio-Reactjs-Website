@@ -102,33 +102,34 @@
     color: #5cccc9;
 }
 
-.intro_sec h1 {
-    font-size: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap");
+
+.intro_sec .font-2-4 {
+    font-size: 2.4rem;
     font-weight: 700;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+.font-poppins {
+    font-family: "Poppins", sans-serif !important;
+}
 
 .intro_sec h3 {
+    font-size: 1.04064rem !important;
     font-family: 'Raleway', gotham;
-    font-size: 13px !important;
     letter-spacing: 2.7px;
     margin-bottom: 3.5rem;
     color: rgba(245, 245, 245, 0.6);
     text-transform: uppercase;
     opacity: 0;
     animation: h3Anim 3s ease-in-out 400ms forwards;
+    font-weight: 700;
 }
 
 @keyframes h3Anim {
     to {
         opacity: 1;
     }
-}
-
-.intro_sec h3 {
-    font-size: 16px;
-    font-weight: 700;
 }
 
 /*  */
@@ -240,10 +241,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin: 0 auto;
-    /* margin: 3rem auto 0; */
+    text-align: start;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -351,4 +352,11 @@
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
     }
+}
+
+.hithere,
+.namechar0,
+.namechar1,
+.namechar2 {
+    color: white;
 }

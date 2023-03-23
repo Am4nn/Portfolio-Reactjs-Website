@@ -42,7 +42,7 @@ function shuffle(content, output, position) {
 const springConfig = { stiffness: 8, damping: 5 };
 
 const DecoderText = memo(
-    ({ text, start = true, delay: startDelay = 0, className, ...rest }) => {
+    ({ text, start = true, delay: startDelay = 0, eachCharClass, className, ...rest }) => {
         const output = useRef([{ type: CharType.Glyph, value: '' }]);
         const container = useRef();
         const reduceMotion = useReducedMotion();
@@ -54,8 +54,8 @@ const DecoderText = memo(
             let animation;
 
             const renderOutput = () => {
-                const characterMap = output.current.map(item => {
-                    return `<span class="${styles[item.type]}">${item.value}</span>`;
+                const characterMap = output.current.map((item, id) => {
+                    return `<span class="${styles[item.type]} ${eachCharClass + id}">${item.value}</span>`;
                 });
 
                 containerInstance.innerHTML = characterMap.join('');
