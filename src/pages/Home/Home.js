@@ -3,8 +3,8 @@ import DisplacementSphere from '../../components/DisplacementSphere/Displacement
 import SocialSideBar from '../../components/LeftSideBar/LeftSideBar';
 import Intro from './Intro/Intro';
 import styles from './Home.module.css';
-// import About from './About/About';
-// import Projects from './Projects/Projects';
+import About from './About/About';
+import Projects from './Projects/Projects';
 
 const Home = () => {
     return (
@@ -13,8 +13,8 @@ const Home = () => {
             <SocialSideBar />
             <main className={styles.mainComponent}>
                 <Intro />
-                {/* <About /> */}
-                {/* <Projects /> */}
+                <About />
+                <Projects />
             </main>
         </Fragment>
     )

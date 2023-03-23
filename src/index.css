@@ -16,8 +16,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background: linear-gradient(176deg, rgb(18, 24, 27) 50%, rgb(32, 39, 55) 100%) !important;
     min-height: 100vh;
+    color: rgb(255, 255, 255) !important;
+    background-color: var(--background-universal) !important;
+    /* background: linear-gradient(176deg, rgb(18, 24, 27) 50%, rgb(32, 39, 55) 100%) !important; */
 }
 
 code {

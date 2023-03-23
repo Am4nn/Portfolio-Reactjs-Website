@@ -8,6 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 import Notice from './pages/Notice/Notice';
 // import ParticlesJS from './components/ParticlesJS/ParticlesJS';
 // import Ccursor from './components/Ccursor/Ccursor';
+import ScrollUpBtn from './components/ScrollUpBtn/ScrollUpBtn';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 {/* <Ccursor /> */}
                 {/* <ParticlesJS /> */}
                 <NavBar />
+                <ScrollUpBtn />
                 <Routes>
                     <Route exact path='/' element={<Navigate replace to='/home' />} />
                     <Route exact path='/home' element={<Home />} />

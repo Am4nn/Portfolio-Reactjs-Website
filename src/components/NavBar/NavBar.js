@@ -11,11 +11,19 @@ const hashRoutes = [
     ["Home", "/home/#home"], ["About", "/home/#about"], ["Projects", "/home/#projects"], ["Resume", "/resume"]
 ];
 const sections = ['home', 'about', 'projects', 'resume'];
+const animationClass = "fadedown", mountDelay = 100;
 
 const NavBar = () => {
+
     const [expand, setExpand] = useState(false);
 
-    const animationClass = "fadedown", mountDelay = 100;
+    const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        const onScroll = () => (window.scrollY > 50) ? setScrolled(true) : setScrolled(false);
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
 
     const [isMounted, setIsMounted] = useState(false);
 
@@ -25,13 +33,17 @@ const NavBar = () => {
     }, []);
 
     const currentSection = useScrollSpy(sections, 200);
+    useEffect(() => {
+        if (currentSection)
+            window.history.replaceState({}, "", `#${currentSection}`);
+    }, [currentSection]);
 
     return (
         <Navbar
             expanded={expand}
             fixed="top"
             expand="md"
-            className='navbar navfontfamily'
+            className={`navbar navfontfamily ${scrolled ? 'scrolled' : ''}`}
         >
             <Container>
                 <TransitionGroup component={null}>
@@ -44,7 +56,7 @@ const NavBar = () => {
                         <Navbar.Toggle
                             aria-controls="responsive-navbar-nav"
                             onClick={() => {
-                                setExpand(expand ? false : "expanded");
+                                setExpand(prev => prev ? false : "expanded");
                             }}
                         />
                     ].map((item, i) => (
