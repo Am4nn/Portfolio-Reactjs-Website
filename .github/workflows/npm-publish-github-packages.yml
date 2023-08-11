@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: 18
       - run: npm install
-      - run: npm start
+      - run: npm install -g serve
+      - run: serve -s build
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
