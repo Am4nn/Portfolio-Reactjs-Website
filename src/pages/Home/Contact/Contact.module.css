@@ -1,0 +1,25 @@
+.earthCanvas {
+    width: 35rem;
+    height: 35rem;
+}
+
+@media (max-width: 768px) {
+    .earthCanvas {
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .earthCanvas {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .earthCanvas {
+        width: auto;
+        height: auto;
+    }
+}
