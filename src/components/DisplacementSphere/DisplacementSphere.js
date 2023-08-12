@@ -213,7 +213,7 @@ const DisplacementSphere = props => {
             style={{
                 opacity: `${opacity}`,
                 position: "absolute",
-                width: "100vw",
+                width: "100dvw",
                 inset: 0,
                 transition: "opacity 3s cubic-bezier(0.4, 0.0, 0.2, 1)"
             }}

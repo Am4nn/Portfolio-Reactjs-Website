@@ -18,7 +18,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    min-height: 100vh;
+    min-height: 100dvh;
     color: rgb(255, 255, 255) !important;
     background-color: var(--background-universal) !important;
 }
@@ -26,4 +26,14 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
+}
+
+#portfolio-main>section {
+    position: relative;
+    min-height: 100dvh;
+    padding-top: 6rem;
+}
+
+#portfolio-main>section:first-child {
+    padding-top: unset;
 }

@@ -8,9 +8,14 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import useScrollSpy from './../../hooks/useScrollSpy';
 
 const hashRoutes = [
-    ["Home", "/home/#home"], ["About", "/home/#about"], ["Projects", "/home/#projects"], ["Resume", "/resume"]
+    ["Home", "/home/#home"],
+    ["About", "/home/#about"],
+    ["Experience", "/home/#experience"],
+    ["Projects", "/home/#projects"],
+    ["Contact", "/home/#contact"],
+    ["Resume", "/resume"]
 ];
-const sections = ['home', 'about', 'projects', 'resume'];
+const sections = ['home', 'about', 'experience', 'projects', 'contact', 'resume'];
 const animationClass = "fadedown", mountDelay = 100;
 
 const NavBar = () => {

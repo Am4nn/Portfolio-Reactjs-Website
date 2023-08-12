@@ -1,0 +1,34 @@
+.subText {
+    color: rgb(170, 166, 195);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.headText {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 55px;
+}
+
+@media (max-width: 768px) {
+    .headText {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .subText {
+        font-size: 14px;
+    }
+
+    .headText {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .headText {
+        font-size: 30px;
+    }
+}
