@@ -6,16 +6,12 @@ import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import NotFound from './pages/NotFound/NotFound';
 import NavBar from './components/NavBar/NavBar';
 import Notice from './pages/Notice/Notice';
-// import ParticlesJS from './components/ParticlesJS/ParticlesJS';
-// import Ccursor from './components/Ccursor/Ccursor';
 import ScrollUpBtn from './components/ScrollUpBtn/ScrollUpBtn';
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className={classes.App}>
-                {/* <Ccursor /> */}
-                {/* <ParticlesJS /> */}
                 <NavBar />
                 <ScrollUpBtn />
                 <Routes>
@@ -24,7 +20,7 @@ const App = () => {
                     <Route exact path='/notice' element={<Notice />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
-            </div >
+            </div>
         </BrowserRouter>
     );
 }

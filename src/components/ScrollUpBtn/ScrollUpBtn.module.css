@@ -9,15 +9,15 @@
     bottom: 1.25rem;
     right: 1.25rem;
     display: grid;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     cursor: pointer;
     place-items: center;
     border-radius: 9999px;
     border-style: none;
     padding: 0px;
-    color: #00EFEA;
-    background-color: hsl(267, 68%, 16%);
+    color: rgb(108 121 131/ 1);
+    background-color: rgb(0 0 0 /0.5);
     outline: 2px solid transparent;
     outline-offset: 2px;
     opacity: 0;
@@ -29,10 +29,9 @@
 
 .button:hover {
     color: hsl(186, 100%, 60%);
-    background-color: hsl(267, 78%, 11%);
 }
 
 .button svg {
-    height: 1.25rem;
-    width: 1.25rem
+    height: 1.01rem;
+    width: 1.01rem
 }

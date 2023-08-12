@@ -403,11 +403,11 @@
     color: transparent;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .scrollIndicator {
         display: none;
     }
-}
+} */
 
 .scrollIndicator::before {
     content: '';

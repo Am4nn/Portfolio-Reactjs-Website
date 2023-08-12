@@ -3,18 +3,18 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Icon } from '../Icons';
 import styles from './LeftSideBar.module.css';
 
-const socialMedia = [
+const socialMediaDetails = [
     {
         name: 'GitHub',
         url: 'https://github.com/Am4nn',
     },
     {
         name: 'Instagram',
-        url: 'https://instagram.com/include._',
+        url: 'https://www.instagram.com/am4n_arya',
     },
     {
         name: 'Linkedin',
-        url: 'https://www.linkedin.com/company/include-sgsits/',
+        url: 'https://www.linkedin.com/in/aman-arya-79a52121b',
     },
     {
         name: 'Email',
@@ -47,7 +47,7 @@ const SocialSideBar = () => {
         <LeftBottomSide>
             <ul className={styles.StyledSocialList}>
                 <TransitionGroup component={null}>
-                    {isMounted && socialMedia && [{}, ...socialMedia, {}].map(({ url, name }, i) => (
+                    {isMounted && socialMediaDetails && [{}, ...socialMediaDetails, {}].map(({ url, name }, i) => (
                         <CSSTransition mountOnEnter={false} key={i} classNames={animationClass} timeout={loaderDelay}>
                             {url ? <li style={{ transitionDelay: `${i + 1}00ms` }} key={i}>
                                 <a href={url} aria-label={name} target="_blank" rel="noreferrer">

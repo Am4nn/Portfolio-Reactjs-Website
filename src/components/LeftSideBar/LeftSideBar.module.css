@@ -3,7 +3,6 @@
     position: fixed;
     bottom: 0;
     z-index: 10;
-    color: #a8b2d1;
 }
 
 .left {
@@ -19,7 +18,7 @@
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .StyledSideElement {
         display: none;
     }
@@ -105,7 +104,7 @@
 
 .StyledSocialList li a:hover,
 .StyledSocialList li a:focus {
-    color: rgb(0, 229, 255);
+    color: hsl(345, 100%, 85%);
 }
 
 .bar {
@@ -113,5 +112,6 @@
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: rgb(179, 250, 255);
+    background-color: hsl(184, 100%, 85%);
+    background-color: rgb(255 255 255 / 0.4);
 }

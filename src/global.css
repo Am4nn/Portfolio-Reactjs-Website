@@ -101,3 +101,21 @@
 }
 
 /* ------------------------------------------------ */
+
+/* Parallax Effect Classes */
+
+.parallaxWrapper {
+    perspective: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.parallaxHeader {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.parallaxBackground {
+    transform: translateZ(-10px) scale(2);
+}
