@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Contact.module.css';
 import SectionHeading from '../../../components/SectionHeading/SectionHeading';
-import EarthCanvas from '../../../components/EarthCanvas/EarthCanvas';
+// import EarthCanvas from '../../../components/EarthCanvas/EarthCanvas';
 
 const Contact = () => {
     return (
@@ -10,12 +10,12 @@ const Contact = () => {
                 subText="Get In Touch"
                 headText="Say Hello"
             />
-            <div style={{
+            {/* <div style={{
                 width: "30rem",
                 height: "30rem"
             }}>
                 <EarthCanvas />
-            </div>
+            </div> */}
         </section>
     )
 }
