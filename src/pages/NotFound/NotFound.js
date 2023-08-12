@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import classes from './styles.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGhost, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faGhost } from '@fortawesome/free-solid-svg-icons'
 import SlidingBtn from '../../components/SlidingBtn/SlidingBtn'
 
 
