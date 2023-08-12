@@ -29,3 +29,9 @@
         width: 19rem !important;
     }
 }
+
+@media (max-width:991px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+}
