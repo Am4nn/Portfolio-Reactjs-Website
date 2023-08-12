@@ -6,6 +6,8 @@ import "./style.css"
 import { HashLink } from 'react-router-hash-link';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import useScrollSpy from './../../hooks/useScrollSpy';
+import Social from "./Social/Social";
+import { useMediaQuery } from "@mui/material";
 
 const hashRoutes = [
     ["Home", "/home/#home"],
@@ -21,6 +23,7 @@ const animationClass = "fadedown", mountDelay = 100;
 const NavBar = () => {
 
     const [expand, setExpand] = useState(false);
+    const isMobile = useMediaQuery('(max-width: 769px)');
 
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
@@ -31,7 +34,6 @@ const NavBar = () => {
 
 
     const [isMounted, setIsMounted] = useState(false);
-
     useEffect(() => {
         const timeout = setTimeout(() => setIsMounted(true), mountDelay);
         return () => clearTimeout(timeout);
@@ -48,9 +50,10 @@ const NavBar = () => {
             expanded={expand}
             fixed="top"
             expand="md"
+            variant='dark'
             className={`navbar navfontfamily ${scrolled ? 'scrolled' : ''}`}
         >
-            <Container>
+            <Container className="nav-container-fix">
                 <TransitionGroup component={null}>
                     {isMounted && [
                         <Navbar.Brand href="/" className="d-flex">
@@ -60,9 +63,8 @@ const NavBar = () => {
                         </Navbar.Brand>,
                         <Navbar.Toggle
                             aria-controls="responsive-navbar-nav"
-                            onClick={() => {
-                                setExpand(prev => prev ? false : "expanded");
-                            }}
+                            className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
+                            onClick={() => setExpand(prev => prev ? false : "expanded")}
                         />
                     ].map((item, i) => (
                         <CSSTransition mountOnEnter={false} key={i} classNames='fade' timeout={2000}>
@@ -72,7 +74,7 @@ const NavBar = () => {
                 </TransitionGroup>
 
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ms-auto" defaultActiveKey="#home">
+                    <Nav className="ms-auto class-nav-df-jc-ai" defaultActiveKey="#home">
                         <TransitionGroup component={null}>
                             {isMounted && hashRoutes.map((route, id) => (
                                 <Nav.Link
@@ -91,6 +93,7 @@ const NavBar = () => {
                                 </CSSTransition>
                             ))}
                         </TransitionGroup>
+                        {isMobile && <Social />}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

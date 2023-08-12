@@ -1,25 +1,31 @@
-.earthCanvas {
-    width: 35rem;
-    height: 35rem;
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dsize {
+    height: 30rem !important;
+    width: 30rem !important;
 }
 
 @media (max-width: 768px) {
-    .earthCanvas {
-        width: 30rem;
-        height: 30rem;
+    .dsize {
+        height: 27rem !important;
+        width: 27rem !important;
     }
 }
 
 @media (max-width: 640px) {
-    .earthCanvas {
-        width: 25rem;
-        height: 25rem;
+    .dsize {
+        height: 24rem !important;
+        width: 24rem !important;
     }
 }
 
 @media (max-width: 450px) {
-    .earthCanvas {
-        width: 20rem;
-        height: 20rem;
+    .dsize {
+        height: 19rem !important;
+        width: 19rem !important;
     }
 }

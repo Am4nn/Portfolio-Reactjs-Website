@@ -1,0 +1,63 @@
+.StyledSideElement {
+    width: 100%;
+    z-index: 10;
+}
+
+.StyledSocialList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.StyledSocialList li a {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.StyledSocialList li a:hover,
+.StyledSocialList li a:focus {
+    transform: translateY(-3px);
+}
+
+.StyledSocialList li a svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.StyledSocialList li a img,
+.StyledSocialList li a svg {
+    vertical-align: middle;
+}
+
+.StyledSocialList li a img[alt=""],
+.StyledSocialList li a img:not([alt]) {
+    filter: blur(5px);
+}
+
+.StyledSocialList li a svg {
+    fill: none;
+    vertical-align: middle;
+}
+
+.feather {
+    fill: none;
+}
+
+.StyledSocialList li a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: var(--transition);
+    color: rgb(255 255 255 / 0.6);
+}
+
+.StyledSocialList li a:hover,
+.StyledSocialList li a:focus {
+    color: rgb(255, 255, 255);
+}

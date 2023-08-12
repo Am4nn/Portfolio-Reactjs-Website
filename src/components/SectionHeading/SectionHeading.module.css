@@ -1,3 +1,7 @@
+.wrapper {
+    margin-bottom: 1.5rem;
+}
+
 .subText {
     color: rgb(170, 166, 195);
     letter-spacing: 0.05em;

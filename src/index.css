@@ -34,6 +34,18 @@ code {
     padding-top: 6rem;
 }
 
+@media (max-width: 640px) {
+    #portfolio-main>section {
+        padding-top: 4rem;
+    }
+}
+
 #portfolio-main>section:first-child {
     padding-top: unset;
+}
+
+/* Customizing Scroll Bar */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }

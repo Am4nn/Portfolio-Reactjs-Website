@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Contact.module.css';
 import SectionHeading from '../../../components/SectionHeading/SectionHeading';
 import EarthCanvas from '../../../components/EarthCanvas/EarthCanvas';
+import Form from './Form/Form';
 
 const Contact = () => {
     return (
@@ -10,8 +11,9 @@ const Contact = () => {
                 subText="Get In Touch"
                 headText="Say Hello"
             />
-            <div className={styles.earthCanvas}>
-                <EarthCanvas />
+            <div className={styles.container}>
+                <Form className={styles.dsize} />
+                <EarthCanvas className={styles.dsize} />
             </div>
         </section>
     )

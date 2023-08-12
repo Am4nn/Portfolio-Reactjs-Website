@@ -11,7 +11,7 @@ const Earth = () => {
     );
 };
 
-const EarthCanvas = () => {
+const EarthCanvas = ({ className }) => {
     return (
         <Canvas
             shadows
@@ -24,6 +24,7 @@ const EarthCanvas = () => {
                 far: 200,
                 position: [-4, 3, 6],
             }}
+            className={className}
         >
             <Suspense fallback={<CanvasLoader />}>
 

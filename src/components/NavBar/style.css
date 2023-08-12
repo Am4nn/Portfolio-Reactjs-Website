@@ -19,7 +19,6 @@
     /* text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975; */
 }
 
-
 .myNavLink {
     text-decoration: none;
     position: relative;
@@ -60,19 +59,30 @@
     opacity: 1 !important;
 }
 
-/* .myNavLink:hover::after,
-.myNavLink:active::after,
-.myNavLink:focus::after {
-    transform: scaleX(1);
-    transform-origin: left;
-} */
-
 .navbar {
     z-index: 900 !important;
     position: fixed !important;
     padding: 0rem 0rem 0rem 2rem !important;
     font-size: 1.2rem !important;
-    /* box-shadow: 0px 3px 3px 0px rgba(9, 5, 29, 0.171) !important; */
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        padding: 0 !important;
+        backdrop-filter: blur(0px) !important;
+        background-color: rgb(20, 20, 20);
+    }
+
+    .cross>span {
+        background-image: url("../../../public/cross.svg");
+    }
+
+    .class-nav-df-jc-ai {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: calc(100dvh - 50px);
+    }
 }
 
 .scrolled {
@@ -115,5 +125,17 @@
 
     .nav-link {
         padding: 0.7rem 1rem !important;
+    }
+}
+
+.navbar_tglbtn:focus {
+    color: white;
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+
+@media (min-width: 768px) {
+    .nav-container-fix {
+        max-width: 960px;
     }
 }

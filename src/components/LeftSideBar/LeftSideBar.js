@@ -2,25 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Icon } from '../Icons';
 import styles from './LeftSideBar.module.css';
-
-const socialMediaDetails = [
-    {
-        name: 'GitHub',
-        url: 'https://github.com/Am4nn',
-    },
-    {
-        name: 'Instagram',
-        url: 'https://www.instagram.com/am4n_arya',
-    },
-    {
-        name: 'Linkedin',
-        url: 'https://www.linkedin.com/in/aman-arya-79a52121b',
-    },
-    {
-        name: 'Email',
-        url: 'mailto:125aryaaman@gmail.com',
-    }
-];
+import { socialMediaDetails } from "../../utils/config"
 
 const mountDelay = 600 + 1000;
 const loaderDelay = 1000;
