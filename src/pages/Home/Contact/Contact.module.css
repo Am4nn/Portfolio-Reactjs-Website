@@ -19,7 +19,7 @@
 
 @media (max-width: 450px) {
     .earthCanvas {
-        width: auto;
-        height: auto;
+        width: 20rem;
+        height: 20rem;
     }
 }
