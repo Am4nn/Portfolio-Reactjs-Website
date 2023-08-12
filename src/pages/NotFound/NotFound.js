@@ -23,9 +23,7 @@ const NotFound = () => {
 
                 <div className={classes.containerx}>
                     <Link to='/home' className={classes.link}>
-                        <SlidingBtn text='Home Page'>
-                            <FontAwesomeIcon icon={faArrowRight} />
-                        </SlidingBtn>
+                        <SlidingBtn text='Home Page' />
                     </Link>
                 </div>
             </main>
