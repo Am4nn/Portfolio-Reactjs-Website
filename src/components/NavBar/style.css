@@ -66,6 +66,12 @@
     font-size: 1.2rem !important;
 }
 
+.class-nav-df-jc-ai {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 @media screen and (max-width: 767px) {
     .navbar {
         padding: 0 !important;
@@ -78,9 +84,6 @@
     }
 
     .class-nav-df-jc-ai {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         height: calc(100dvh - 50px);
     }
 }
