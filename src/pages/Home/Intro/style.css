@@ -404,12 +404,6 @@
     color: transparent;
 }
 
-/* @media (max-width: 991px) {
-    .scrollIndicator {
-        display: none;
-    }
-} */
-
 .scrollIndicator::before {
     content: '';
     height: 7px;
@@ -426,6 +420,7 @@
 
 .scrollIndicator[data-hidden='true'] {
     opacity: 0;
+    pointer-events: none;
 }
 
 .scrollIndicator[data-hidden='false'] {

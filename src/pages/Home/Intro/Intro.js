@@ -7,10 +7,10 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // import { Link } from 'react-router-dom'
 
 const animatedText = [
-    "Programmer",
-    "Gamer",
     "Developer",
-    "Tech Enthusiast"
+    "Programmer",
+    "Tech Enthusiast",
+    "Gamer"
 ];
 
 const Intro = () => {
