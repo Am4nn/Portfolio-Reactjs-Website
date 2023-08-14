@@ -4,14 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import "./style.css"
 import ScramblingText from './../../../components/ScramblingText/ScramblingText';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { introAnimatedText, myName, shortDescription } from "../../../utils/config";
 // import { Link } from 'react-router-dom'
-
-const animatedText = [
-    "Developer",
-    "Programmer",
-    "Tech Enthusiast",
-    "Gamer"
-];
 
 const Intro = () => {
 
@@ -29,13 +23,13 @@ const Intro = () => {
             Hi There !
         </div>,
         <h1 className='myname mb-1x font-2-4'>
-            <DecoderText text="I’m Aman Arya" eachCharClass="namechar" delay={250} />
+            <DecoderText text={`I’m ${myName}`} eachCharClass="namechar" delay={250} />
         </h1>,
 
-        <h3>MERN and Full Stack Developer</h3>,
+        <h3>{shortDescription}</h3>,
 
         <div className="mytextcolorwhite fluidz-48 mb-5 font-2-4" style={{ fontWeight: 500 }}>
-            <ScramblingText data={animatedText} delay={1500} />
+            <ScramblingText data={introAnimatedText} delay={1500} />
         </div>,
 
         // <p className="mytextcolorwhite mb-1x p">
@@ -94,7 +88,7 @@ const Intro = () => {
                 <div className="intro mx-auto">
                     <TransitionGroup component={null}>
                         {isMounted && children.map((item, i) => (
-                            <CSSTransition mountOnEnter={false} key={i} classNames={animationClass} timeout={loaderDelay}>
+                            <CSSTransition mountOnEnter={false} key={`intro-transition-${i}`} classNames={animationClass} timeout={loaderDelay}>
                                 <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
                             </CSSTransition>
                         ))}

@@ -1,4 +1,3 @@
-import { VisuallyHidden } from '../VisuallyHidden/VisuallyHidden';
 import { useReducedMotion, useSpring } from 'framer-motion';
 import { memo, useEffect, useRef } from 'react';
 import { delay } from '../../utils/delay';
@@ -90,12 +89,21 @@ const DecoderText = memo(
 
         return (
             <span className={classes(styles.text, className)} {...rest}>
-                <VisuallyHidden className={styles.label}>{text}</VisuallyHidden>
+                <VisuallyHidden text={text} />
                 <span aria-hidden className={styles.content} ref={container} />
             </span>
         );
     }
 );
 
+const VisuallyHidden = ({ text }) => (
+    <span
+        className={styles.hidden}
+        data-show-on-focus={false}
+        data-hidden
+    >
+        {text}
+    </span>
+);
 
 export default DecoderText;

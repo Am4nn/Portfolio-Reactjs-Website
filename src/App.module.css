@@ -1,9 +1,0 @@
-.App {
-  font-family: gotham;
-  caret-color: rgb(255, 127, 80);
-  height: auto !important;
-}
-
-::selection {
-  background-color: rgba(255, 127, 80, 0.2);
-}

@@ -1,26 +1,18 @@
 import React from 'react';
-import classes from './App.module.css';
-import 'bootstrap'
-import Home from './pages/Home/Home';
-import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
-import NotFound from './pages/NotFound/NotFound';
+import { BrowserRouter } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
-import Notice from './pages/Notice/Notice';
 import ScrollUpBtn from './components/ScrollUpBtn/ScrollUpBtn';
+import NavigationStack from './components/NavigationStack/NavigationStack';
+import 'bootstrap'
+import './index.css';
+import './transitions.css';
 
 const App = () => {
     return (
         <BrowserRouter>
-            <div className={classes.App}>
-                <NavBar />
-                <ScrollUpBtn />
-                <Routes>
-                    <Route exact path='/' element={<Navigate replace to='/home' />} />
-                    <Route exact path='/home' element={<Home />} />
-                    <Route exact path='/notice' element={<Notice />} />
-                    <Route path='*' element={<NotFound />} />
-                </Routes>
-            </div>
+            <NavBar />
+            <ScrollUpBtn />
+            <NavigationStack />
         </BrowserRouter>
     );
 }

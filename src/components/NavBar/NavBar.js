@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react"
 import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
-import "./style.css"
 import { HashLink } from 'react-router-hash-link';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import useScrollSpy from './../../hooks/useScrollSpy';
 import Social from "./Social/Social";
 import { useMediaQuery } from "@mui/material";
+import "./style.css"
 
 const hashRoutes = [
     ["Home", "/home/#home"],
@@ -17,7 +17,7 @@ const hashRoutes = [
     ["Contact", "/home/#contact"],
     ["Resume", "/resume"]
 ];
-const sections = ['home', 'about', 'experience', 'projects', 'contact', 'resume'];
+const sections = hashRoutes.map(route => route[0].toLowerCase());
 const animationClass = "fadedown", mountDelay = 100;
 
 const NavBar = () => {
@@ -67,7 +67,7 @@ const NavBar = () => {
                             onClick={() => setExpand(prev => prev ? false : "expanded")}
                         />
                     ].map((item, i) => (
-                        <CSSTransition mountOnEnter={false} key={i} classNames='fade' timeout={2000}>
+                        <CSSTransition mountOnEnter={false} key={`brand-transition-${i}`} classNames='fade' timeout={2000}>
                             <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
                         </CSSTransition>
                     ))}
@@ -78,7 +78,7 @@ const NavBar = () => {
                         <TransitionGroup component={null}>
                             {isMounted && hashRoutes.map((route, id) => (
                                 <Nav.Link
-                                    key={id}
+                                    key={`nav-link-${id}`}
                                     as={HashLink}
                                     to={route[1]}
                                     active={currentSection === sections[id]}
@@ -88,7 +88,7 @@ const NavBar = () => {
                                     {route[0]}
                                 </Nav.Link>
                             )).map((item, i) => (
-                                <CSSTransition mountOnEnter={false} key={i} classNames={animationClass} timeout={2000}>
+                                <CSSTransition mountOnEnter={false} key={`nav-transition-${i}`} classNames={animationClass} timeout={2000}>
                                     <Nav.Item style={{ transitionDelay: `${i + 1}00ms` }}>{item}</Nav.Item>
                                 </CSSTransition>
                             ))}
