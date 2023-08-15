@@ -15,7 +15,8 @@ const MouseGradient = () => {
         const updateGradient = event => {
             const x = event.clientX;
             const y = event.clientY;
-            gradientDiv.style.background = `radial-gradient(400px at ${x}px ${y}px, hsl(186, 100%, 50%, 0.08), transparent 80%)`;
+            // gradientDiv.style.background = `radial-gradient(400px at ${x}px ${y}px, hsla(186, 100%, 50%, 0.08), transparent 80%)`;
+            gradientDiv.style.background = `radial-gradient(400px at ${x}px ${y}px, rgba(255, 255, 255, 0.05), transparent 80%)`;
         }
         document.addEventListener('mousemove', updateGradient);
 
