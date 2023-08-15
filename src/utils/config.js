@@ -65,7 +65,7 @@ export const experiences = [
         points: [
             "Developing and maintaining web applications for hackindore using Nextjs and other related technologies",
             "With the assistance of other coordinators, successfully organized events and guided sessions for students",
-            'Speaker at "Tech-tonic" a programming road-map for first year students',
+            'Speaker at "Tech-tonic" a programming road-map for freshers',
         ],
     }
 ];
