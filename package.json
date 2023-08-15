@@ -11,7 +11,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "client": "cd ./client && npm start",
-    "build": "cd ./client && npm run build"
+    "build": "cd ./client && npm install && npm run build"
   },
   "author": "Aman Arya - am4nn",
   "license": "ISC",
