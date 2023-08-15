@@ -2,9 +2,10 @@ import React from 'react';
 import { BrowserRouter } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
 import ScrollUpBtn from './components/ScrollUpBtn/ScrollUpBtn';
+import MouseGradient from './components/MouseGradient/MouseGradient';
 import NavigationStack from './components/NavigationStack/NavigationStack';
 import 'bootstrap'
-import './index.css';
+import './global.css';
 import './transitions.css';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <BrowserRouter>
             <NavBar />
             <ScrollUpBtn />
+            <MouseGradient />
             <NavigationStack />
         </BrowserRouter>
     );

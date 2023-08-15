@@ -9,7 +9,7 @@
 }
 
 ::selection {
-    background-color: rgba(255, 127, 80, 0.2);
+    background-color: hsla(16, 100%, 66%, 0.2);
 }
 
 body {
