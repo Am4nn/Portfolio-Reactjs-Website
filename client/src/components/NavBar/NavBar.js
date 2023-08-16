@@ -7,6 +7,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import useScrollSpy from './../../hooks/useScrollSpy';
 import Social from "./Social/Social";
 import { useMediaQuery } from "@mui/material";
+import resume from "../../assests/resume/Aman_Arya_Offcampus_Resume.pdf";
 import "./style.css"
 
 const hashRoutes = [
@@ -15,7 +16,7 @@ const hashRoutes = [
     ["Experience", "/home/#experience"],
     ["Projects", "/home/#projects"],
     ["Contact", "/home/#contact"],
-    ["Resume", "/resume"]
+    ["Resume", resume]
 ];
 const sections = hashRoutes.map(route => route[0].toLowerCase());
 const animationClass = "fadedown", mountDelay = 100;
@@ -76,18 +77,33 @@ const NavBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto class-nav-df-jc-ai" defaultActiveKey="#home">
                         <TransitionGroup component={null}>
-                            {isMounted && hashRoutes.map((route, id) => (
-                                <Nav.Link
-                                    key={`nav-link-${id}`}
-                                    as={HashLink}
-                                    to={route[1]}
-                                    active={currentSection === sections[id]}
-                                    onClick={() => setExpand(false)}
-                                    className='myNavLink'
-                                >
-                                    {route[0]}
-                                </Nav.Link>
-                            )).map((item, i) => (
+                            {isMounted && hashRoutes.map((route, id) => {
+                                if (route[0] === "Resume") {
+                                    return (
+                                        <Nav.Link
+                                            key={`nav-link-${id}`}
+                                            href={route[1]}
+                                            onClick={() => setExpand(false)}
+                                            className='myNavLink'
+                                            target="_blank"
+                                        >
+                                            {route[0]}
+                                        </Nav.Link>
+                                    )
+                                }
+                                return (
+                                    <Nav.Link
+                                        key={`nav-link-${id}`}
+                                        as={HashLink}
+                                        to={route[1]}
+                                        active={currentSection === sections[id]}
+                                        onClick={() => setExpand(false)}
+                                        className='myNavLink'
+                                    >
+                                        {route[0]}
+                                    </Nav.Link>
+                                )
+                            }).map((item, i) => (
                                 <CSSTransition mountOnEnter={false} key={`nav-transition-${i}`} classNames={animationClass} timeout={2000}>
                                     <Nav.Item style={{ transitionDelay: `${i + 1}00ms` }}>{item}</Nav.Item>
                                 </CSSTransition>
