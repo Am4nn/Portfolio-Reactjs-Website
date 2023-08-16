@@ -24,6 +24,7 @@
     "express-rate-limit": "^6.9.0",
     "helmet": "^7.0.0",
     "hpp": "^0.2.3",
+    "nodemailer": "^6.9.4",
     "nodemon": "^3.0.1",
     "react-scripts": "5.0.1"
   }

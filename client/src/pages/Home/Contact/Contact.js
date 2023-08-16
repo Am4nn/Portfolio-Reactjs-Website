@@ -13,8 +13,8 @@ const Contact = () => {
                 headText="Say Hello"
             />
             <div className={styles.container}>
-                <Form className={styles.dsize} />
-                <EarthCanvas className={styles.dsize} />
+                <Form className={styles.dsizeF} />
+                <EarthCanvas className={styles.dsizeE} />
             </div>
             <StarsCanvas />
         </section>

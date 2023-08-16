@@ -9,12 +9,10 @@ const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
 const hpp = require('hpp');
 const rateLimit = require("express-rate-limit");
+const { connectNodeMailer, sendMessageToMe } = require('./utils/mail');
 
 const express = require('express');
 const app = express();
-
-// Trust all proxy headers
-app.set('trust proxy', true);
 
 // parse json request body
 app.use(express.json());
@@ -35,14 +33,19 @@ app.get("/api", (req, res) => {
     res.status(200).send("API Running");
 });
 
-app.post("/api/contact", (req, res) => {
+app.post("/api/contact", async (req, res) => {
     const { email, message } = req.body;
     try {
-        console.log({ email, message });
-        res.status(200).json("Thank you for contacting me. I will get back to you as soon as possible!");
+        console.log("Send Mail: ", { email, message });
+        const response = await sendMessageToMe({ email, message });
+        if (response.rejected.length > 0) {
+            console.error(response);
+            return res.status(500).json("Mail Rejected");
+        }
+        return res.status(200).json("Thank you for contacting me. I will get back to you as soon as possible!");
     } catch (error) {
-        console.log(error);
-        res.status(500).json(error || "Internal Server Error");
+        console.error(error);
+        return res.status(500).json(error || "Internal Server Error");
     }
 });
 
@@ -53,7 +56,19 @@ app.get('*', (req, res) =>
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 );
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-    console.log(`Server running on PORT ${port}`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, async () => {
+
+    console.log(`Server running on PORT ${PORT}`);
+
+    try {
+        // Establish Connection for Nodemailer
+        await connectNodeMailer();
+        console.log("Connected to Nodemailer");
+    } catch (error) {
+        console.error(error);
+    }
+
+}).on('error', error => {
+    console.error(`Failed to start server: ${error}`);
 });
