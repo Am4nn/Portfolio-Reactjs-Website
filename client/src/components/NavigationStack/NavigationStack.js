@@ -24,6 +24,9 @@ const NavigationStack = () => {
 const FallbackComponent = () => {
     return (
         <div style={{
+            position: "absolute",
+            top: "0",
+            width: "100%",
             marginTop: "5rem",
             display: "flex",
             justifyContent: "center",

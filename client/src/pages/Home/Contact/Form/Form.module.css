@@ -1,11 +1,29 @@
 .form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid rgb(255 255 255 / 0.1);
+    flex-direction: column;
     border-radius: 10px;
     font-size: 5rem;
     margin-bottom: 1rem;
+    padding: 3rem 2rem 0 2rem;
     background-color: var(--background-universal);
+}
+
+.clippedButton {
+    margin-left: 36px !important;
+    margin-top: 2rem !important;
+}
+
+.errormsg {
+    color: #c61818;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.3rem;
+    letter-spacing: 0.02em;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+}
+
+.validError {
+    color: #c61818;
+    font-size: 0.8rem;
+    font-family: 'Shadows Into Light Two', cursive;
 }

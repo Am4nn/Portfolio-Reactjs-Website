@@ -32,6 +32,17 @@ app.get("/api", (req, res) => {
     res.status(200).send("API Running");
 });
 
+app.post("/api/contact", (req, res) => {
+    const { email, message } = req.body;
+    try {
+        console.log({ email, message });
+        res.status(200).json("Thank you for contacting me. I will get back to you as soon as possible!");
+    } catch (error) {
+        console.log(error);
+        res.status(500).json(error || "Internal Server Error");
+    }
+});
+
 // Serve Static Assets
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'client/build')));

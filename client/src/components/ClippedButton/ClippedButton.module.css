@@ -1,0 +1,86 @@
+:root {
+    --transition-time: 1s;
+}
+
+.btn {
+    font-size: 1.3rem;
+    height: 3.5rem;
+    width: fit-content;
+    padding: 0 1.4rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1.4em 0;
+    transform: scale(0.9);
+    color: black;
+
+    transition: transform var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn::after {
+    content: '';
+    width: 100%;
+    height: 3.5rem;
+    position: absolute;
+    border-radius: 5px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+
+    transition: background-color var(--transition-time) cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover {
+    color: rgb(35, 35, 35);
+    transform: scale(0.97);
+}
+
+.btn span {
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skyblue::after {
+    background-color: hsl(180, 100%, 50%);
+}
+
+.skyblue:hover::after {
+    background-color: hsl(180, 100%, 40%);
+}
+
+.blue::after {
+    background-color: hsl(225, 55%, 76%);
+}
+
+.blue:hover::after {
+    background-color: hsl(226, 55%, 69%);
+}
+
+.grey::after {
+    background-color: hsl(0, 0%, 83%);
+}
+
+.grey:hover::after {
+    background-color: hsl(0, 0%, 73%);
+}
+
+.green::after {
+    background-color: hsl(161, 100%, 50%);
+}
+
+.green:hover::after {
+    background-color: hsl(161, 100%, 43%);
+}
+
+.yellow::after {
+    background-color: hsl(60, 80%, 50%);
+}
+
+.yellow:hover::after {
+    background-color: hsl(60, 80%, 43%);
+}
