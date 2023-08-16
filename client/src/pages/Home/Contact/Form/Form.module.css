@@ -8,6 +8,18 @@
     background-color: var(--background-universal);
 }
 
+@media (max-width: 768px) {
+    .form {
+        padding: 2rem 0.5rem 0 0.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .form {
+        padding: 2rem 0rem 0 0rem;
+    }
+}
+
 .clippedButton {
     margin-left: 36px !important;
     margin-top: 2rem !important;

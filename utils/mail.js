@@ -25,7 +25,7 @@ const connectNodeMailer = () => {
 }
 
 const mailTempltePlainText = ({ email, message }) => `${email}: ${message}`;
-const mailTemplateHTML = ({ email, message }) => `<b>${email}</b> <br>${message}<br/>`;
+const mailTemplateHTML = ({ email, message }) => `<h3><b>Email: ${email}</b></h3> <br> <div>Message: ${message}</div>`;
 const myEmail = process.env.MY_EMAIL;
 
 const sendMessageToMe = async ({ email, message }) => {
