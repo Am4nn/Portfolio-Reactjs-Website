@@ -8,6 +8,12 @@ import { makeStyles } from "@mui/styles"
 import { EmailOutlined, MessageOutlined } from "@mui/icons-material";
 import { SERVER_LINK } from '../../../../dev-server-link';
 
+// function for email validation using regex
+const emailRegex = /^[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
+const isEmailValid = email => {
+    return emailRegex.test(email);
+}
+
 const Form = ({ className }) => {
     const classes = useStyles();
 
@@ -23,6 +29,10 @@ const Form = ({ className }) => {
         if (formStates.loading) return;
         if (!formStates.email || !formStates.message) {
             alert("Please fill all the fields");
+            return;
+        }
+        if (!isEmailValid(formStates.email)) {
+            alert("Please enter a valid email");
             return;
         }
 
