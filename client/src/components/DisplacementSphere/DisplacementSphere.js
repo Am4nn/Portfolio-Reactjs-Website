@@ -202,6 +202,7 @@ const DisplacementSphere = props => {
     useEffect(() => {
         const parallaxFactor = 0.45;
         const handleScroll = () => {
+            if (!canvasRef.current) return;
             canvasRef.current.style.transform = `translateY(${window.scrollY * parallaxFactor}px)`;
         }
         window.addEventListener("scroll", handleScroll);
