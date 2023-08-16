@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import DecoderText from '../../../components/DecoderText/DecoderText'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import "./style.css"
 import ScramblingText from './../../../components/ScramblingText/ScramblingText';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
