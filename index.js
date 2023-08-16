@@ -13,6 +13,9 @@ const rateLimit = require("express-rate-limit");
 const express = require('express');
 const app = express();
 
+// Trust all proxy headers
+app.set('trust proxy', true);
+
 // parse json request body
 app.use(express.json());
 app.use(cookieParser());
