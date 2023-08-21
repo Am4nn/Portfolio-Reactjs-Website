@@ -14,19 +14,22 @@ const { connectNodeMailer, sendMessageToMe } = require('./utils/mail');
 const express = require('express');
 const app = express();
 
+// since hosting on onrender.com, we need to trust the proxy
+app.set('trust proxy', true);
+
 // parse json request body
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 // Security
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: true }));
 app.use(mongoSanitize());
 app.use(hpp());
 app.use(helmet());
 app.use(rateLimit({
     windowMs: 10 * 60 * 1000, // 10 Minutes
-    max: 500
+    max: 100 // 100 Requests
 }));
 
 app.get("/api", (req, res) => {
