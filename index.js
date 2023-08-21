@@ -15,7 +15,7 @@ const express = require('express');
 const app = express();
 
 // since hosting on onrender.com, we need to trust the proxy
-app.set('trust proxy', true);
+app.set('trust proxy', 1);
 
 // parse json request body
 app.use(express.json());
@@ -34,6 +34,13 @@ app.use(rateLimit({
 
 app.get("/api", (req, res) => {
     res.status(200).send("API Running");
+});
+
+app.get("/api/test", (req, res) => {
+    res.status(200).json({
+        "ip": req.ip,
+        "x-forwarded-for": req.headers['x-forwarded-for']
+    });
 });
 
 app.post("/api/contact", async (req, res) => {
