@@ -1,6 +1,25 @@
 import Goldman_Sachs_Logo from "../assests/Images/company/Goldman_Sachs.png";
 import Hash_Include_Logo from "../assests/Images/company/Hash_Include.png";
 import SGSITS_Logo from "../assests/Images/company/SGSITS_Logo.png";
+import resume from "../assests/resume/resume.pdf";
+import { NO_ABOUT, NO_PROJECTS } from "../dev-env";
+
+export const hashRoutes = [
+    ["Home", "/home/#home"],
+    ["About", "/home/#about"],
+    ["Experience", "/home/#experience"],
+    ["Projects", "/home/#projects"],
+    ["Contact", "/home/#contact"],
+    ["Resume", resume]
+];
+((() => {
+    // function clear out hasRoutes which are not yet available
+    if (NO_ABOUT && NO_PROJECTS) {
+        hashRoutes.splice(1, 1);
+        hashRoutes.splice(2, 1);
+    }
+})());
+export const sections = hashRoutes.map(route => route[0].toLowerCase());
 
 export const introAnimatedText = [
     "Developer",

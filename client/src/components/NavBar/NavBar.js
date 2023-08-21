@@ -1,34 +1,15 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import { HashLink } from 'react-router-hash-link';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import useScrollSpy from './../../hooks/useScrollSpy';
 import Social from "./Social/Social";
 import { useMediaQuery } from "@mui/material";
-import resume from "../../assests/resume/resume.pdf";
 import "./style.css"
-import { NO_ABOUT, NO_PROJECTS } from "./../../dev-env";
+import { Context } from "../../context/state";
+import { hashRoutes, sections } from '../../utils/config'
 
-const hashRoutes = [
-    ["Home", "/home/#home"],
-    ["About", "/home/#about"],
-    ["Experience", "/home/#experience"],
-    ["Projects", "/home/#projects"],
-    ["Contact", "/home/#contact"],
-    ["Resume", resume]
-];
-((() => {
-    // function clear out hasRoutes which are not yet available
-    if (NO_ABOUT) {
-        hashRoutes.splice(1, 1);
-    }
-    if (NO_PROJECTS) {
-        hashRoutes.splice(2, 1);
-    }
-})());
-const sections = hashRoutes.map(route => route[0].toLowerCase());
 const animationClass = "fadedown", mountDelay = 100;
 
 const NavBar = () => {
@@ -50,7 +31,7 @@ const NavBar = () => {
         return () => clearTimeout(timeout);
     }, []);
 
-    const currentSection = useScrollSpy(sections, 200);
+    const { currentSection } = useContext(Context);
     useEffect(() => {
         if (currentSection)
             window.history.replaceState({}, "", `#${currentSection}`);
@@ -94,6 +75,7 @@ const NavBar = () => {
                                             key={`nav-link-${id}`}
                                             href={route[1]}
                                             onClick={() => setExpand(false)}
+                                            active={false}
                                             className='myNavLink'
                                             target="_blank"
                                         >

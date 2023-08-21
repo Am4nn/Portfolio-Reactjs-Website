@@ -1,30 +1,27 @@
-import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom'
+import { useCallback, useEffect, useState } from "react";
 
 const useScrollSpy = (sections, offset = 0) => {
     const [currentSection, setCurrentSection] = useState(null);
-    const location = useLocation();
+
+    const refreshActiveNavLink = useCallback(() => {
+        const currentPosition = window.scrollY + offset;
+        const currentSection = sections.find((section) => {
+            const sectionElement = document.getElementById(section);
+            if (!sectionElement) return false;
+            const sectionTop = sectionElement.offsetTop - offset;
+            const sectionBottom = sectionTop + sectionElement.offsetHeight;
+            return sectionTop <= currentPosition && sectionBottom > currentPosition;
+        });
+
+        setCurrentSection(currentSection ? currentSection : null);
+    }, [sections, offset]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const currentPosition = window.scrollY + offset;
-            const currentSection = sections.find((section) => {
-                const sectionElement = document.getElementById(section);
-                if (!sectionElement) return false;
-                const sectionTop = sectionElement.offsetTop - offset;
-                const sectionBottom = sectionTop + sectionElement.offsetHeight;
-                return sectionTop <= currentPosition && sectionBottom > currentPosition;
-            });
+        window.addEventListener("scroll", refreshActiveNavLink);
+        return () => window.removeEventListener("scroll", refreshActiveNavLink);
+    }, [refreshActiveNavLink]);
 
-            setCurrentSection(currentSection ? currentSection : null);
-        };
-
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [sections, offset, location]);
-
-    return currentSection;
+    return [currentSection, refreshActiveNavLink];
 };
 
 export default useScrollSpy;

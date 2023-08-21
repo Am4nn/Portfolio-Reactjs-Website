@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import ScrollUpBtn from './components/ScrollUpBtn/ScrollUpBtn';
 import MouseGradient from './components/MouseGradient/MouseGradient';
 import NavigationStack from './components/NavigationStack/NavigationStack';
+import StateProvider from './context/state';
 
 import 'bootstrap'
 import './global.css';
@@ -13,10 +14,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
     return (
         <BrowserRouter>
-            <NavBar />
-            <ScrollUpBtn />
-            <MouseGradient />
-            <NavigationStack />
+            <StateProvider>
+                <NavBar />
+                <ScrollUpBtn />
+                <MouseGradient />
+                <NavigationStack />
+            </StateProvider>
         </BrowserRouter>
     );
 }
