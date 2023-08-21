@@ -8,6 +8,7 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Experience from './Experience/Experience';
 import Contact from './Contact/Contact';
+import { NO_ABOUT, NO_PROJECTS } from "../../dev-env";
 
 const Home = () => {
     return (
@@ -16,9 +17,9 @@ const Home = () => {
             <SocialSideBar />
             <main id="portfolio-main" className={styles.mainComponent}>
                 <Intro />
-                <About />
+                {NO_ABOUT ? null : <About />}
                 <Experience />
-                <Projects />
+                {NO_PROJECTS ? null : <Projects />}
                 <Contact />
             </main>
             <Footer />

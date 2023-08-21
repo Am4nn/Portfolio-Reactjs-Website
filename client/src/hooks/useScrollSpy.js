@@ -7,7 +7,7 @@ const useScrollSpy = (sections, offset = 0) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const currentPosition = window.pageYOffset + offset;
+            const currentPosition = window.scrollY + offset;
             const currentSection = sections.find((section) => {
                 const sectionElement = document.getElementById(section);
                 if (!sectionElement) return false;

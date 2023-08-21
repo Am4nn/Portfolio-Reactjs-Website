@@ -6,7 +6,7 @@ import ClippedButton from '../../../../components/ClippedButton/ClippedButton';
 import { Box, TextField } from '@mui/material';
 import { makeStyles } from "@mui/styles"
 import { EmailOutlined, MessageOutlined } from "@mui/icons-material";
-import { SERVER_LINK } from '../../../../dev-server-link';
+import { SERVER_LINK } from '../../../../dev-env';
 
 // function for email validation using regex
 const emailRegex = /^[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
@@ -64,7 +64,7 @@ const Form = ({ className }) => {
                 <EmailOutlined />
                 <TextField
                     id="input-email"
-                    label="Email"
+                    label="Your Email"
                     variant="outlined"
                     color="warning"
                     fullWidth

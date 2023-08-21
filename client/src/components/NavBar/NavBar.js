@@ -7,8 +7,9 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import useScrollSpy from './../../hooks/useScrollSpy';
 import Social from "./Social/Social";
 import { useMediaQuery } from "@mui/material";
-import resume from "../../assests/resume/Aman_Arya_Offcampus_Resume.pdf";
+import resume from "../../assests/resume/resume.pdf";
 import "./style.css"
+import { NO_ABOUT, NO_PROJECTS } from "./../../dev-env";
 
 const hashRoutes = [
     ["Home", "/home/#home"],
@@ -18,6 +19,15 @@ const hashRoutes = [
     ["Contact", "/home/#contact"],
     ["Resume", resume]
 ];
+((() => {
+    // function clear out hasRoutes which are not yet available
+    if (NO_ABOUT) {
+        hashRoutes.splice(1, 1);
+    }
+    if (NO_PROJECTS) {
+        hashRoutes.splice(2, 1);
+    }
+})());
 const sections = hashRoutes.map(route => route[0].toLowerCase());
 const animationClass = "fadedown", mountDelay = 100;
 

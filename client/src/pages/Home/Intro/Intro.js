@@ -5,6 +5,7 @@ import ScramblingText from './../../../components/ScramblingText/ScramblingText'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { introAnimatedText, myName, shortDescription } from "../../../utils/config";
 // import { Link } from 'react-router-dom'
+import { NO_ABOUT } from "./../../../dev-env";
 
 const Intro = () => {
 
@@ -97,7 +98,7 @@ const Intro = () => {
             <a
                 className='scrollIndicator'
                 data-hidden={scrollIndicatorIsMount ? scrollIndicatorHidden : 'true'}
-                href='#about'
+                href={NO_ABOUT ? "#experience" : '#about'}
             >scrollIndicator</a>
         </section>
     )
