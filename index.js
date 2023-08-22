@@ -15,7 +15,7 @@ const express = require('express');
 const app = express();
 
 // since hosting on onrender.com, we need to trust the proxy
-app.set('trust proxy', 1);
+app.set('trust proxy', 2);
 
 // parse json request body
 app.use(express.json());
@@ -59,12 +59,14 @@ app.post("/api/contact", async (req, res) => {
     }
 });
 
-// Serve Static Assets
-// Set Static Folder
-app.use(express.static(path.join(__dirname, 'client/build')));
-app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-);
+// Serve Static Assets only if specified
+if (process.env.NO_CLIENT !== 'true') {
+    // Set Static Folder
+    app.use(express.static(path.join(__dirname, 'client/build')));
+    app.get('*', (req, res) =>
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    );
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
