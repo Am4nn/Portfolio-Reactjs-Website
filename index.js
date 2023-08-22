@@ -15,7 +15,7 @@ const express = require('express');
 const app = express();
 
 // since hosting on onrender.com, we need to trust the proxy
-app.set('trust proxy', 2);
+app.set('trust proxy', 3);
 
 // parse json request body
 app.use(express.json());
