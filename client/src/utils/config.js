@@ -2,7 +2,7 @@ import Goldman_Sachs_Logo from "../assests/Images/company/Goldman_Sachs.png";
 import Hash_Include_Logo from "../assests/Images/company/Hash_Include.png";
 import SGSITS_Logo from "../assests/Images/company/SGSITS_Logo.png";
 import resume from "../assests/resume/resume.pdf";
-import { NO_ABOUT, NO_PROJECTS } from "../dev-env";
+import { NO_PROJECTS } from "../dev-env";
 
 export const hashRoutes = [
     ["Home", "/home/#home"],
@@ -14,9 +14,8 @@ export const hashRoutes = [
 ];
 ((() => {
     // function clear out hasRoutes which are not yet available
-    if (NO_ABOUT && NO_PROJECTS) {
-        hashRoutes.splice(1, 1);
-        hashRoutes.splice(2, 1);
+    if (NO_PROJECTS) {
+        hashRoutes.splice(3, 1);
     }
 })());
 export const sections = hashRoutes.map(route => route[0].toLowerCase());
@@ -49,6 +48,25 @@ export const socialMediaDetails = [
     }
 ];
 
+export const skills = [
+    {
+        name: "Languages",
+        items: ["C", "C++", "Java", "Python", "HTML/CSS", "Javascript", "Typescript"],
+    },
+    {
+        name: "Web Development",
+        items: ["React", "NextJs", "Node", "Redux", "Boot", "RestAPI", "ExpressJs", "SocketIO", "MUI"],
+    },
+    {
+        name: "Database",
+        items: ["MySQL", "MongoDB"],
+    },
+    {
+        name: "Tools/Software/Others",
+        items: ["Git", "Github", "VSCode", "IntellijIdea", "Docker", "Postman", "OpenGL"],
+    },
+];
+
 export const experiences = [
     {
         title: "Summer Analyst",
@@ -57,10 +75,10 @@ export const experiences = [
         icon: Goldman_Sachs_Logo,
         date: "May 2023 - July 2023",
         points: [
-            "Part of Private Wealth Management. Worked on design and development of various new enhancements of a project",
-            "Having experience with Java Spring Boot for back-end, React with Typescript forfront-end, and MongoDB for database, and Junit testing",
-            "Collaborative teamwork: Foster effective collaboration, gather user/client feedback, and iterate project accordingly",
-            "Participating in code reviews",
+            "Engaged in the Goldman Sachs team maintaining client fee calculation applications, implementing 10+ efficiency-focused enhancements",
+            "Implemented a feature enabling users to charge fees as last year to bulk accounts in one click, reducing process time by 85% while ensuring reliability with 20+ JUnit test cases",
+            "Optimized user experience by decreasing UI loading time by 76% through enhanced MongoDB queries",
+            "Rectified over 15 bugs within the internal fee calculation application"
         ],
     },
     {

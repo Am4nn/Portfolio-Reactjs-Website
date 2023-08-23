@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.skills_section {
+    padding: 100px 0 100px;
+    position: relative;
+    max-width: 700px;
+}
+
+.skills-line {
+    position: absolute;
+    width: 150px;
+    border-bottom: solid #31ddac 1px;
+    top: 50%;
+    left: 80px;
+}
+
+.skill-bubble-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-bubble-container>h3,
+.skill-title>h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    text-align: center;
+}
+
+.skills_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 1vw, 20px);
+}
+
+.skills_container img {
+    height: 2.7vw;
+    min-height: 30px;
+}
+
+.skill-category-container h3 {
+    color: #cad6d9;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.skill-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.skill-title h3 {
+    font-size: clamp(13px, 2vw, 18px);
+}
+
+.arrow-img-container {
+    align-items: center;
+    display: flex;
+}
+
+.skill-title img {
+    height: 15px;
+    margin-right: 10px;
+}
+
+.skill-bubble-container {
+    padding: 5px 10px;
+}
+
+@media (max-width: 600px) {
+    .skills_container h3 {
+        font-size: 11px;
+    }
+
+    .arrow-img-container img {
+        height: 12px;
+    }
+}

@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
 import ScrollUpBtn from './components/ScrollUpBtn/ScrollUpBtn';
-import MouseGradient from './components/MouseGradient/MouseGradient';
 import NavigationStack from './components/NavigationStack/NavigationStack';
 import StateProvider from './context/state';
+// import MouseGradient from './components/MouseGradient/MouseGradient';
 
 import 'bootstrap'
 import './global.css';
@@ -17,7 +17,7 @@ const App = () => {
             <StateProvider>
                 <NavBar />
                 <ScrollUpBtn />
-                <MouseGradient />
+                {/* <MouseGradient /> */}
                 <NavigationStack />
             </StateProvider>
         </BrowserRouter>

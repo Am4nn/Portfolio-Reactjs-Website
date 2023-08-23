@@ -34,24 +34,39 @@ code {
 #portfolio-main>section {
     position: relative;
     min-height: 100dvh;
-    padding-top: 6rem;
+    padding-top: 4rem;
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
     #portfolio-main>section {
         padding-top: 4rem;
     }
-}
+} */
 
 #portfolio-main>section:first-child {
     padding-top: unset;
 }
 
-/* Customizing Scroll Bar */
+/*========== Customizing Scroll Bar ==========*/
 /* ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 } */
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+    background-color: #1c2935;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+    background-color: #647578;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #779ea5;
+}
+
 
 :root {
     --background-universal: rgb(18, 18, 18);

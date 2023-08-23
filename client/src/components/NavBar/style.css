@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
 .navfontfamily {
     font-family: "Overpass" !important;
@@ -10,7 +10,7 @@
     padding: 5px 15px;
     border: unset;
     /* font-size: 1.25rem; */
-    font-family: Marcellus;
+    font-family: 'Noto Sans JP', sans-serif;
     color: #fff !important;
     line-height: 2;
     height: 40px;

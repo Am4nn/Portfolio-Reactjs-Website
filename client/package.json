@@ -31,6 +31,7 @@
         "react-error-boundary": "^3.1.4",
         "react-github-calendar": "^3.3.1",
         "react-icons": "^4.4.0",
+        "react-parallax-tilt": "^1.7.162",
         "react-responsive": "^9.0.0-beta.10",
         "react-router": "^6.3.0",
         "react-router-dom": "^6.3.0",

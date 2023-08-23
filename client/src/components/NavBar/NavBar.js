@@ -50,7 +50,7 @@ const NavBar = () => {
                     {isMounted && [
                         <Navbar.Brand href="/" className="d-flex">
                             <span className='nav_ac navbar-brand' to="/">
-                                AMAN
+                                人
                             </span>
                         </Navbar.Brand>,
                         <Navbar.Toggle
