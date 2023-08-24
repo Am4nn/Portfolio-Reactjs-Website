@@ -41,7 +41,7 @@
 .section {
     text-align: center;
     height: auto;
-    min-height: 100dvh;
+    min-height: 100vh;
     flex: 1 0 auto;
     position: relative;
     width: 100%;
@@ -74,7 +74,7 @@
 }
 
 .intro_sec {
-    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 @media (max-width:991.98px) {
