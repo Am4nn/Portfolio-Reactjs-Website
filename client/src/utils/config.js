@@ -63,7 +63,7 @@ export const skills = [
     },
     {
         name: "Tools/Software/Others",
-        items: ["Git", "Github", "VSCode", "IntellijIdea", "Docker", "Postman", "OpenGL"],
+        items: ["Git", "Github", "VSCode", "IntellijIdea", "Docker", "Postman", "OpenGL", "Other"],
     },
 ];
 
