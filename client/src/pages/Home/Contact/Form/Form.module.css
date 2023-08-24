@@ -23,6 +23,11 @@
 .clippedButton {
     margin-left: 36px !important;
     margin-top: 2rem !important;
+    margin-bottom: 0px !important;
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 .errormsg {
@@ -38,4 +43,32 @@
     color: #c61818;
     font-size: 0.8rem;
     font-family: 'Shadows Into Light Two', cursive;
+}
+
+.loading {
+    animation: spinner 0.6s ease-in-out infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.waitingMsg {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.9;
+    margin-left: 48px;
+    margin-top: 5px;
+}
+
+.waitingMsg span {
+    color: hsl(166, 100%, 90%);
+    border-bottom: 1px solid hsl(166, 100%, 90%);
 }

@@ -86,10 +86,11 @@ const Form = ({ className }) => {
                     onChange={(e) => setFormStates(prev => ({ ...prev, message: e.target.value }))}
                 />
             </Box>
-            <ClippedButton onClick={submitForm} color="skyblue" className={styles.clippedButton}>
-                <FontAwesomeIcon style={{ marginRight: "10px" }} icon={formStates.loading ? faSpinner : faPaperPlane} />
+            <ClippedButton onClick={submitForm} color="skyblue" className={[styles.clippedButton, formStates.loading ? styles.disabled : ""].join(" ")}>
+                <FontAwesomeIcon className={formStates.loading ? styles.loading : ""} style={{ marginRight: "10px" }} icon={formStates.loading ? faSpinner : faPaperPlane} />
                 {formStates.loading ? "Sending Message" : "Send Message"}
             </ClippedButton>
+            {formStates.loading ? <div className={styles.waitingMsg}>It may take up to <span>10 seconds</span> to send !</div> : ""}
         </div>
     )
 }
