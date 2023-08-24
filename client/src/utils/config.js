@@ -1,7 +1,7 @@
-import Goldman_Sachs_Logo from "../assests/Images/company/Goldman_Sachs.png";
-import Hash_Include_Logo from "../assests/Images/company/Hash_Include.png";
-import SGSITS_Logo from "../assests/Images/company/SGSITS_Logo.png";
-import resume from "../assests/resume/resume.pdf";
+import Goldman_Sachs_Logo from "../assets/Images/company/Goldman_Sachs.png";
+import Hash_Include_Logo from "../assets/Images/company/Hash_Include.png";
+import SGSITS_Logo from "../assets/Images/company/SGSITS_Logo.png";
+import resume from "../assets/resume/resume.pdf";
 import { NO_PROJECTS } from "../dev-env";
 
 export const hashRoutes = [
@@ -59,7 +59,7 @@ export const skills = [
     },
     {
         name: "Database",
-        items: ["MySQL", "MongoDB"],
+        items: ["MySQL", "MongoDB", "Redis"],
     },
     {
         name: "Tools/Software/Others",

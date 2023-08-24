@@ -12,7 +12,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.5px) {
     .mainComponent {
         padding: 0rem 50px;
     }

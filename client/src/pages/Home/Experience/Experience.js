@@ -7,12 +7,11 @@ import "react-vertical-timeline-component/style.min.css";
 import SectionHeading from '../../../components/SectionHeading/SectionHeading';
 import styles from './Experience.module.css';
 import { experiences } from "../../../utils/config";
-// import { useMediaQuery } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 
 const Experience = () => {
 
-    // const isMobile = useMediaQuery('(max-width: 640px)');
-    // animate={!isMobile}
+    const isMobile = useMediaQuery('(max-width: 767.5px)');
 
     return (
         <section id="experience" className={styles.experience}>
@@ -21,7 +20,7 @@ const Experience = () => {
                 headText="Work Experience"
             />
             <div className={styles.timelineWrapper}>
-                <VerticalTimeline animate lineColor="rgb(243, 243, 243)">
+                <VerticalTimeline animate={!isMobile} lineColor="rgb(243, 243, 243)">
                     {experiences.map((experience, index) => (
                         <ExperienceCard
                             key={`experience-${index}`}

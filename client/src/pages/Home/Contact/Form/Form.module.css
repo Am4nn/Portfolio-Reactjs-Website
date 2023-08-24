@@ -8,7 +8,7 @@
     background-color: var(--background-universal);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.5px) {
     .form {
         padding: 2rem 0.5rem 0 0.5rem;
     }

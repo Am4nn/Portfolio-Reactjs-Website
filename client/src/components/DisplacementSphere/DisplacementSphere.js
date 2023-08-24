@@ -21,6 +21,7 @@ import { media } from '../../utils/style';
 import { cleanRenderer, cleanScene, removeLights } from '../../utils/three';
 import fragShader from './displacementSphereFragment.glsl.js';
 import vertShader from './displacementSphereVertex.glsl.js';
+import { useMediaQuery } from '@mui/material';
 
 const springConfig = {
     stiffness: 30,
@@ -29,6 +30,7 @@ const springConfig = {
 };
 
 const backgroundColor = { r: 18, g: 18, b: 18 };
+const parallaxFactor = 0.45;
 
 const DisplacementSphere = props => {
     const start = useRef(Date.now());
@@ -48,6 +50,7 @@ const DisplacementSphere = props => {
     const rotationX = useSpring(0, springConfig);
     const rotationY = useSpring(0, springConfig);
     const { measureFps, isLowFps } = useFps(isInViewport);
+    const isMobile = useMediaQuery('(max-width:600px)');
 
     useEffect(() => {
         const { innerWidth, innerHeight } = window;
@@ -147,14 +150,14 @@ const DisplacementSphere = props => {
             rotationY.set(position.x / 2);
         };
 
-        if (!reduceMotion && isInViewport) {
+        if (!isMobile && !reduceMotion && isInViewport) {
             window.addEventListener('mousemove', onMouseMove);
         }
 
         return () => {
             window.removeEventListener('mousemove', onMouseMove);
         };
-    }, [isInViewport, reduceMotion, rotationX, rotationY]);
+    }, [isInViewport, reduceMotion, rotationX, rotationY, isMobile]);
 
     useEffect(() => {
         let animation;
@@ -198,16 +201,17 @@ const DisplacementSphere = props => {
         setOpacity(1);
     }, []);
 
-    // for using Parallax Effect
+    // for using Parallax Effect only when not in mobile
     useEffect(() => {
-        const parallaxFactor = 0.45;
         const handleScroll = () => {
             if (!canvasRef.current) return;
             canvasRef.current.style.transform = `translateY(${window.scrollY * parallaxFactor}px)`;
         }
-        window.addEventListener("scroll", handleScroll);
+        if (!isMobile) {
+            window.addEventListener("scroll", handleScroll);
+        }
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [isMobile]);
 
     return (
         <canvas

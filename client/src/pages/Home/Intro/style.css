@@ -81,9 +81,7 @@
     .intro_sec {
         display: block;
     }
-}
 
-@media (max-width:991.98px) {
     .intro_sec .intro {
         max-width: 700px;
         padding-left: 20px;
@@ -285,7 +283,7 @@
     height: calc(5vw + 5vh + 5vmin);
     width: calc(5vw + 5vh + 5vmin);
     border-radius: 500px;
-    background: url('/src/assests/Images/mypic.jpg') center center no-repeat;
+    background: url('/src/assets/Images/mypic.jpg') center center no-repeat;
     background-size: cover;
     box-shadow: 0 3px 12px rgb(0 0 0 / 23%), 0 3px 12px rgb(0 0 0 / 16%);
     transition: box-shadow .3s ease-in-out;

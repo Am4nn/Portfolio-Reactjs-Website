@@ -4,7 +4,7 @@ import { useMediaQuery } from "@mui/material";
 
 const MouseGradient = () => {
 
-    const isMobile = useMediaQuery("(max-width: 900px)");
+    const isMobile = !useMediaQuery("(min-width: 992px)");
 
     useEffect(() => {
         if (isMobile) {

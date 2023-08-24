@@ -72,20 +72,26 @@
     align-items: center;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767.5px) {
     .navbar {
         padding: 0 !important;
         backdrop-filter: blur(0px) !important;
-        background-color: rgb(20, 20, 20);
-    }
-
-    .cross>span {
-        background-image: url("../../../public/cross.svg");
+        background-color: rgb(20, 20, 20) !important;
+        /* padding: 1rem 2rem !important; */
+        font-size: 1.4rem !important;
     }
 
     .class-nav-df-jc-ai {
         height: calc(100dvh - 50px);
     }
+
+    .nav-link {
+        padding: 0.7rem 1rem !important;
+    }
+}
+
+.cross>span {
+    background-image: url("../../../public/cross.svg");
 }
 
 .scrolled {
@@ -120,16 +126,6 @@
     z-index: 1;
 }
 
-@media (max-width: 767px) {
-    .navbar {
-        /* padding: 1rem 2rem !important; */
-        font-size: 1.4rem !important;
-    }
-
-    .nav-link {
-        padding: 0.7rem 1rem !important;
-    }
-}
 
 .navbar_tglbtn:focus {
     color: white;
@@ -137,7 +133,7 @@
     box-shadow: unset !important;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .nav-container-fix {
         max-width: 960px;
     }

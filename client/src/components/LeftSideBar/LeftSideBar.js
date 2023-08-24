@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Icon } from '../Icons';
 import styles from './LeftSideBar.module.css';
 import { socialMediaDetails } from "../../utils/config"
+import { useMediaQuery } from '@mui/material';
 
 const mountDelay = 600 + 1000;
 const loaderDelay = 1000;
@@ -20,11 +21,15 @@ const SocialSideBar = () => {
 
     const [isMounted, setIsMounted] = useState(false);
 
+    const isMobile = useMediaQuery('(max-width: 767.5px)');
+
     useEffect(() => {
+        if (isMobile) return;
         const timeout = setTimeout(() => setIsMounted(true), mountDelay);
         return () => clearTimeout(timeout);
-    }, []);
+    }, [isMobile]);
 
+    if (isMobile) return null;
     return (
         <LeftBottomSide>
             <ul className={styles.StyledSocialList}>
