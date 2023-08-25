@@ -1,10 +1,11 @@
-/node_modules
-/build
-/.env
+node_modules
+build
+.env
 
-/client/node_modules
-/client/build
-/client/.env
+client/node_modules
+client/build
+client/.env
 
-/extra
-/todo
+extra
+todo
+fonts-used.txt

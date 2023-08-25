@@ -32,10 +32,10 @@ const NavBar = () => {
     }, []);
 
     const { currentSection } = useContext(Context);
-    useEffect(() => {
-        if (currentSection)
-            window.history.replaceState({}, "", `#${currentSection}`);
-    }, [currentSection]);
+    // useEffect(() => {
+    //     if (currentSection)
+    //         window.history.replaceState({}, "", `#${currentSection}`);
+    // }, [currentSection]);
 
     return (
         <Navbar
