@@ -8,7 +8,6 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Experience from './Experience/Experience';
 import Contact from './Contact/Contact';
-import { NO_PROJECTS } from "../../dev-env";
 import { Context } from '../../context/state';
 
 const Home = () => {
@@ -26,7 +25,7 @@ const Home = () => {
                 <Intro />
                 <About />
                 <Experience />
-                {NO_PROJECTS ? null : <Projects />}
+                <Projects />
                 <Contact />
             </main>
             <Footer />

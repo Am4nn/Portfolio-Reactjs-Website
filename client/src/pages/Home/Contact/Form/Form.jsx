@@ -6,7 +6,6 @@ import ClippedButton from '../../../../components/ClippedButton/ClippedButton';
 import { Box, TextField } from '@mui/material';
 import { makeStyles } from "@mui/styles"
 import { EmailOutlined, MessageOutlined } from "@mui/icons-material";
-import { SERVER_LINK } from '../../../../dev-env';
 
 // function for email validation using regex
 const emailRegex = /^[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/;
@@ -15,6 +14,7 @@ const isEmailValid = email => {
 }
 
 const Form = ({ className }) => {
+
     const classes = useStyles();
 
     const [formStates, setFormStates] = useState({
@@ -39,6 +39,7 @@ const Form = ({ className }) => {
         setFormStates(prev => ({ ...prev, loading: true }));
 
         try {
+            const SERVER_LINK = import.meta.env.REACT_APP_SERVER_LINK ? import.meta.env.REACT_APP_SERVER_LINK : ""
             const response = await fetch(`${SERVER_LINK}/api/contact`, {
                 method: "POST",
                 headers: {

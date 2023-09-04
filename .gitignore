@@ -6,8 +6,6 @@ client/node_modules
 client/build
 client/.env
 
-client_next
-
 extra
 todo
 fonts-used.txt

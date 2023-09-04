@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap");
+
 :root {
     --bs-btn-padding-x: 0.75rem;
     --bs-btn-padding-y: 0.375rem;
@@ -18,8 +22,6 @@
     --secondary-color: #fff;
     --text-color: #fff;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
 .mytextcolorwhite {
     color: white;
@@ -99,9 +101,6 @@
 .intro_sec .intro .feature .wrap-icon svg {
     color: #5cccc9;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap");
 
 .font-poppins {
     font-family: "Poppins", sans-serif !important;

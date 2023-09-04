@@ -32,7 +32,7 @@ const SkillCategory = ({ name, items }) => (
 
 const SkillBubble = ({ name }) => (
     <div className={styles.skill_bubble_container}>
-        <img src={`skills/` + name + `.svg`} alt="" />
+        <img src={`/skills/` + name + `.svg`} alt="" />
         <h3>{name}</h3>
     </div>
 );

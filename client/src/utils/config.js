@@ -2,7 +2,6 @@ import Goldman_Sachs_Logo from "../assets/Images/company/Goldman_Sachs.png";
 import Hash_Include_Logo from "../assets/Images/company/Hash_Include.png";
 import SGSITS_Logo from "../assets/Images/company/SGSITS_Logo.png";
 import resume from "../assets/resume/resume.pdf";
-import { NO_PROJECTS } from "../dev-env";
 
 export const hashRoutes = [
     ["Home", "/home/#home"],
@@ -12,12 +11,7 @@ export const hashRoutes = [
     ["Contact", "/home/#contact"],
     ["Resume", resume]
 ];
-((() => {
-    // function clear out hasRoutes which are not yet available
-    if (NO_PROJECTS) {
-        hashRoutes.splice(3, 1);
-    }
-})());
+
 export const sections = hashRoutes.map(route => route[0].toLowerCase());
 
 export const introAnimatedText = [
