@@ -39,7 +39,7 @@ const Form = ({ className }) => {
         setFormStates(prev => ({ ...prev, loading: true }));
 
         try {
-            const SERVER_LINK = import.meta.env.REACT_APP_SERVER_LINK ? import.meta.env.REACT_APP_SERVER_LINK : ""
+            const SERVER_LINK = import.meta.env.VITE_SERVER_LINK ? import.meta.env.VITE_SERVER_LINK : ""
             const response = await fetch(`${SERVER_LINK}/api/contact`, {
                 method: "POST",
                 headers: {
