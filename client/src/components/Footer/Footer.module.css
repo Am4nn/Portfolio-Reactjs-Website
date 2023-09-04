@@ -1,6 +1,6 @@
 @font-face {
     font-family: gotham-light;
-    src: url('../../assets/fonts/gotham-book.woff2');
+    src: url('/fonts/gotham-book.woff2');
 }
 
 .footer {

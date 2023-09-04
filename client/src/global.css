@@ -1,6 +1,6 @@
 @font-face {
     font-family: gotham;
-    src: url('./assets/fonts/gotham-medium.woff2');
+    src: url('/fonts/gotham-medium.woff2');
 }
 
 :root {

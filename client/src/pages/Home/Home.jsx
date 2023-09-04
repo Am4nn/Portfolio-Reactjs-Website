@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import Intro from './Intro/Intro';
 import styles from './Home.module.css';
 import About from './About/About';
-import Projects from './Projects/Projects';
+// import Projects from './Projects/Projects';
 import Experience from './Experience/Experience';
 import Contact from './Contact/Contact';
 import { Context } from '../../context/state';
@@ -25,7 +25,7 @@ const Home = () => {
                 <Intro />
                 <About />
                 <Experience />
-                <Projects />
+                {/* <Projects /> */}
                 <Contact />
             </main>
             <Footer />

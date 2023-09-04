@@ -33,6 +33,7 @@ const NavBar = () => {
 
     const { currentSection } = useContext(Context);
     // useEffect(() => {
+        // for live update on url
     //     if (currentSection)
     //         window.history.replaceState({}, "", `#${currentSection}`);
     // }, [currentSection]);
