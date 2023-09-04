@@ -106,7 +106,8 @@ const DisplacementSphere = props => {
         dirLight.position.y = 100;
 
         lights.current = [dirLight, ambientLight];
-        scene.current.background = new Color(backgroundColor.r / 255, backgroundColor.g / 255, backgroundColor.b / 255);
+        // commenting out background color to make it transparent
+        // scene.current.background = new Color(backgroundColor.r / 255, backgroundColor.g / 255, backgroundColor.b / 255);
         lights.current.forEach(light => scene.current.add(light));
 
         return () => {
