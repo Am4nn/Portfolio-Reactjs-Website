@@ -5,6 +5,7 @@ build
 client/node_modules
 client/build
 client/.env
+client/.vercel
 
 extra
 todo
