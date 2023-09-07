@@ -9,6 +9,8 @@ import { useMediaQuery } from "@mui/material";
 import "./style.css"
 import { Context } from "../../context/state";
 import { hashRoutes, sections } from '../../utils/config'
+import Menu from "./Menu/Menu";
+import Logo from "../Logo/Logo";
 
 const animationClass = "fadedown", mountDelay = 100;
 
@@ -33,7 +35,7 @@ const NavBar = () => {
 
     const { currentSection } = useContext(Context);
     // useEffect(() => {
-        // for live update on url
+    // for live update on url
     //     if (currentSection)
     //         window.history.replaceState({}, "", `#${currentSection}`);
     // }, [currentSection]);
@@ -47,7 +49,7 @@ const NavBar = () => {
             className={`navbar navfontfamily ${scrolled ? 'scrolled' : ''}`}
         >
             <Container className="nav-container-fix">
-                <TransitionGroup component={null}>
+                {/* <TransitionGroup component={null}>
                     {isMounted && [
                         <Navbar.Brand href="/" className="d-flex">
                             <span className='nav_ac navbar-brand' to="/">
@@ -64,7 +66,27 @@ const NavBar = () => {
                             <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
                         </CSSTransition>
                     ))}
+                </TransitionGroup> */}
+
+                <TransitionGroup component={null}>
+                    {isMounted && [
+                        <Navbar.Brand href="/" className="d-flex">
+                            <Logo />
+                        </Navbar.Brand>,
+                        <Navbar.Toggle
+                            aria-controls="responsive-navbar-nav"
+                            className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
+                            onClick={() => setExpand(prev => prev ? false : "expanded")}
+                        >
+                            <Menu expand={expand} setExpand={setExpand} />
+                        </Navbar.Toggle>
+                    ].map((item, i) => (
+                        <CSSTransition mountOnEnter={false} key={`brand-transition-${i}`} classNames='fade' timeout={2000}>
+                            <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+                        </CSSTransition>
+                    ))}
                 </TransitionGroup>
+
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto class-nav-df-jc-ai" defaultActiveKey="#home">

@@ -37,6 +37,13 @@ code {
     padding-top: 4rem;
 }
 
+@media (max-width: 767.5px) {
+    #portfolio-main>section {
+        padding-top: 5rem;
+    }
+}
+
+
 /* @media (max-width: 640px) {
     #portfolio-main>section {
         padding-top: 4rem;
@@ -68,7 +75,7 @@ code {
 }
 
 :root {
-    --background-universal: rgb(18, 18, 18);
+    --background-universal: rgb(20, 20, 20);
 
     --use-gradient1: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
     --use-gradient2: linear-gradient(101deg, #5191d5, #d31297);

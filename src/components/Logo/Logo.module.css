@@ -1,0 +1,51 @@
+.logo {
+    position: relative;
+    z-index: 3;
+}
+
+.highlight {
+    z-index: 2;
+}
+
+.bg_white {
+    z-index: 1;
+}
+
+.bg_white,
+.highlight {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg_white>div:first-child {
+    width: 90%;
+    height: 76%;
+    background-color: white;
+    position: relative;
+}
+
+.highlight>div:first-child {
+    width: 90%;
+    height: 76%;
+    background-color: rgb(0 229 255);
+    opacity: 0;
+    transform: scale3d(1, 0, 1);
+    transform-origin: top;
+
+    transition: transform 400ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 0.1s ease 400ms;
+    position: relative;
+}
+
+.logo:hover .highlight>div:first-child {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+    transform-origin: bottom;
+    transition: transform 400ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 0.1s ease;
+}
