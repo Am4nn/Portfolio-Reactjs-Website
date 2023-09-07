@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import classes from './styles.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGhost } from '@fortawesome/free-solid-svg-icons'
 import SlidingBtn from '../../components/SlidingBtn/SlidingBtn'
+import Ghost from './Ghost'
 
 const NotFound = () => {
     return (
@@ -12,7 +11,7 @@ const NotFound = () => {
                 <h1 className={classes.h1}>
                     4
                     <span className={classes.span}>
-                        <FontAwesomeIcon icon={faGhost} />
+                        <Ghost />
                     </span>
                     4
                 </h1>
@@ -29,4 +28,4 @@ const NotFound = () => {
     )
 }
 
-export default NotFound
+export default NotFound;

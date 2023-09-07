@@ -18,7 +18,7 @@ const SkillCategory = ({ name, items }) => (
     <div className={styles.skill_category_container} data-aos="fade-up">
         <div className={styles.skill_title}>
             <div className={styles.arrow_img_container}>
-                <img src="skills/arrow1.svg" alt="" />
+                <img src="/skills/arrow.svg" alt="" />
             </div>
             <h3>{name}</h3>
         </div>
@@ -32,7 +32,7 @@ const SkillCategory = ({ name, items }) => (
 
 const SkillBubble = ({ name }) => (
     <div className={styles.skill_bubble_container}>
-        <img src={`/skills/` + name + `.svg`} alt="" />
+        <img src={`/skills/` + name + `.svg`} alt={name} loading="lazy" />
         <h3>{name}</h3>
     </div>
 );

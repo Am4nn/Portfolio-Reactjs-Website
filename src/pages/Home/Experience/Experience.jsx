@@ -49,6 +49,7 @@ const ExperienceCard = ({ experience }) => {
                         src={experience.icon}
                         alt={experience.company_name}
                         className={styles.companyIcon}
+                        loading="lazy"
                     />
                 </div>
             }

@@ -24,12 +24,12 @@ export const socialMediaDetails = [
         url: 'https://github.com/Am4nn',
     },
     {
-        name: 'Instagram',
-        url: 'https://www.instagram.com/am4n_arya',
-    },
-    {
         name: 'Linkedin',
         url: 'https://www.linkedin.com/in/aman-arya-79a52121b',
+    },
+    {
+        name: 'Instagram',
+        url: 'https://www.instagram.com/am4n_arya',
     },
     {
         name: 'Email',
