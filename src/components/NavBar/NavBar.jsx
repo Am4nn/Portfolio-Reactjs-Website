@@ -78,7 +78,7 @@ const NavBar = () => {
                             className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
                             onClick={() => setExpand(prev => prev ? false : "expanded")}
                         >
-                            <Menu expand={expand} setExpand={setExpand} />
+                            <Menu expand={expand} />
                         </Navbar.Toggle>
                     ].map((item, i) => (
                         <CSSTransition mountOnEnter={false} key={`brand-transition-${i}`} classNames='fade' timeout={2000}>
