@@ -6,7 +6,7 @@ const Logo = () => {
         <div style={{ padding: "5px 15px" }}>
             <div className={styles.logo}>
                 <img
-                    src='/public/logo.svg'
+                    src='/logo.svg'
                     alt=''
                     width={40}
                     height={40}
