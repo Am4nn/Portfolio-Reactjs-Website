@@ -10,8 +10,8 @@ const Logo = () => {
                     alt=''
                     width={40}
                     height={40}
-                    priority
                     className={styles.logo}
+                    loading='eager'
                 />
                 <div className={styles.highlight}><div /></div>
                 <div className={styles.bg_white}><div /></div>

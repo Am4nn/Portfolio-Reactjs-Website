@@ -1,9 +1,12 @@
 {
-  "short_name": "Portfolio",
-  "name": "Aman Arya's Portfolio",
-  "icons": [],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "short_name": "Aman Arya",
+    "name": "Aman Arya | Portfolio",
+    "description": "Aman Arya's Portfolio website",
+    "icons": [
+        "/icon.svg"
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "rgb(20,20,20)",
+    "background_color": "rgb(20,20,20)"
 }
