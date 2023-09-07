@@ -35,6 +35,7 @@ code {
     position: relative;
     min-height: 100vh;
     padding-top: 4rem;
+    width: 100%;
 }
 
 @media (max-width: 767.5px) {

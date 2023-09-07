@@ -55,35 +55,9 @@ const Intro = () => {
         // </div>
     ];
 
-
-
-    const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState('true');
-    const [scrollIndicatorIsMount, setScrollIndicatorIsMount] = useState(false);
-
-    useEffect(() => {
-
-        const hiddenId = setTimeout(() => setScrollIndicatorHidden('false'), (mountDelay + loaderDelay - 1));
-        const mountId = setTimeout(() => setScrollIndicatorIsMount(true), (mountDelay + loaderDelay));
-
-        const toggleAtTop = () => {
-            const scrolled = document.documentElement.scrollTop;
-            if (scrolled >= 20) setScrollIndicatorHidden('true');
-            else if (scrolled < 20) setScrollIndicatorHidden('false');
-        };
-        window.addEventListener('scroll', toggleAtTop);
-
-        return () => {
-            clearTimeout(hiddenId);
-            clearTimeout(mountId);
-            window.removeEventListener('scroll', toggleAtTop);
-        }
-    }, []);
-
-
-
     return (
         <section id="home" className="section">
-            <div className="intro_sec d-flex align-items-center ">
+            <div className="intro_sec d-flex align-items-center">
                 <div className="intro mx-auto">
                     <TransitionGroup component={null}>
                         {isMounted && children.map((item, i) => (
@@ -94,11 +68,6 @@ const Intro = () => {
                     </TransitionGroup>
                 </div>
             </div>
-            <a
-                className='scrollIndicator'
-                data-hidden={scrollIndicatorIsMount ? scrollIndicatorHidden : 'true'}
-                href='#about'
-            >scrollIndicator</a>
         </section>
     )
 }
