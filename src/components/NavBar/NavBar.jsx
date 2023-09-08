@@ -46,40 +46,15 @@ const NavBar = () => {
             fixed="top"
             expand="md"
             variant='dark'
-            className={`navbar navfontfamily ${scrolled ? 'scrolled' : ''}`}
+            className={`navbar navfontfamily ${scrolled ? 'scrolled' : ''} ${expand ? 'navbar-expanded' : ''}`}
         >
             <Container className="nav-container-fix">
-                {/* <TransitionGroup component={null}>
-                    {isMounted && [
-                        <Navbar.Brand href="/" className="d-flex">
-                            <span className='nav_ac navbar-brand' to="/">
-                                人
-                            </span>
-                        </Navbar.Brand>,
-                        <Navbar.Toggle
-                            aria-controls="responsive-navbar-nav"
-                            className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
-                            onClick={() => setExpand(prev => prev ? false : "expanded")}
-                        />
-                    ].map((item, i) => (
-                        <CSSTransition mountOnEnter={false} key={`brand-transition-${i}`} classNames='fade' timeout={2000}>
-                            <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-                        </CSSTransition>
-                    ))}
-                </TransitionGroup> */}
-
                 <TransitionGroup component={null}>
                     {isMounted && [
-                        <Navbar.Brand href="/" className="d-flex">
-                            <Logo />
-                        </Navbar.Brand>,
-                        <Navbar.Toggle
-                            aria-controls="responsive-navbar-nav"
-                            className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
-                            onClick={() => setExpand(prev => prev ? false : "expanded")}
-                        >
-                            <Menu expand={expand} />
-                        </Navbar.Toggle>
+                        // <Brand1 />,
+                        <Brand2 />,
+                        // <Toggle1 expand={expand} setExpand={setExpand} />,
+                        <Toggle2 expand={expand} setExpand={setExpand} />
                     ].map((item, i) => (
                         <CSSTransition mountOnEnter={false} key={`brand-transition-${i}`} classNames='fade' timeout={2000}>
                             <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
@@ -131,5 +106,34 @@ const NavBar = () => {
         </Navbar >
     );
 }
+
+const Brand1 = () => (
+    <Navbar.Brand href="/" className="d-flex">
+        <span className='nav_ac navbar-brand' to="/">
+            人
+        </span>
+    </Navbar.Brand>
+);
+const Toggle1 = ({ expand, setExpand }) => (
+    <Navbar.Toggle
+        aria-controls="responsive-navbar-nav"
+        className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
+        onClick={() => setExpand(prev => prev ? false : "expanded")}
+    />
+);
+const Brand2 = () => (
+    <Navbar.Brand href="/" className="d-flex">
+        <Logo />
+    </Navbar.Brand>
+);
+const Toggle2 = ({ expand, setExpand }) => (
+    <Navbar.Toggle
+        aria-controls="responsive-navbar-nav"
+        className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
+        onClick={() => setExpand(prev => prev ? false : "expanded")}
+    >
+        <Menu expand={expand} />
+    </Navbar.Toggle>
+);
 
 export default NavBar;
