@@ -2,13 +2,28 @@
     "short_name": "Aman Arya",
     "name": "Aman Arya | Portfolio",
     "description": "Aman Arya's Portfolio website",
-    "icons": {
-        "192": "/icon-192x192.png",
-        "144": "/icon-144x144.png",
-        "96": "/icon-96x96.png",
-        "32": "/icon-32x32.png",
-        "16": "/icon-16x16.png"
-    },
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/icon-144x144.png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/icon-96x96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/icon-32x32.png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/icon-16x16.png",
+            "sizes": "16x16"
+        }
+    ],
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#141414",

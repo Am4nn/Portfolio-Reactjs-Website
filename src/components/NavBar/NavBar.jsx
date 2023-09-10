@@ -9,15 +9,15 @@ import { useMediaQuery } from "@mui/material";
 import "./style.css"
 import { Context } from "../../context/state";
 import { hashRoutes, sections } from '../../utils/config'
-import Menu from "./Menu/Menu";
 import Logo from "../Logo/Logo";
+import { Divide as Hamburger } from "hamburger-react";
 
 const animationClass = "fadedown", mountDelay = 100;
 
 const NavBar = () => {
 
     const [expand, setExpand] = useState(false);
-    const isMobile = useMediaQuery('(max-width: 769px)');
+    const isMobile = useMediaQuery('(max-width: 767.5px)');
 
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
@@ -51,10 +51,8 @@ const NavBar = () => {
             <Container className="nav-container-fix">
                 <TransitionGroup component={null}>
                     {isMounted && [
-                        // <Brand1 />,
-                        <Brand2 />,
-                        // <Toggle1 expand={expand} setExpand={setExpand} />,
-                        <Toggle2 expand={expand} setExpand={setExpand} />
+                        <Brand />,
+                        <Toggle expand={expand} setExpand={setExpand} />
                     ].map((item, i) => (
                         <CSSTransition mountOnEnter={false} key={`brand-transition-${i}`} classNames='fade' timeout={2000}>
                             <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
@@ -107,32 +105,18 @@ const NavBar = () => {
     );
 }
 
-const Brand1 = () => (
-    <Navbar.Brand href="/" className="d-flex">
-        <span className='nav_ac navbar-brand' to="/">
-            人
-        </span>
-    </Navbar.Brand>
-);
-const Toggle1 = ({ expand, setExpand }) => (
-    <Navbar.Toggle
-        aria-controls="responsive-navbar-nav"
-        className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
-        onClick={() => setExpand(prev => prev ? false : "expanded")}
-    />
-);
-const Brand2 = () => (
+const Brand = () => (
     <Navbar.Brand href="/" className="d-flex">
         <Logo />
     </Navbar.Brand>
 );
-const Toggle2 = ({ expand, setExpand }) => (
+const Toggle = ({ expand, setExpand }) => (
     <Navbar.Toggle
         aria-controls="responsive-navbar-nav"
-        className={["navbar_tglbtn", expand ? "cross" : ""].join(" ")}
+        className="navbar_tglbtn"
         onClick={() => setExpand(prev => prev ? false : "expanded")}
     >
-        <Menu expand={expand} />
+        <Hamburger toggled={expand} />
     </Navbar.Toggle>
 );
 

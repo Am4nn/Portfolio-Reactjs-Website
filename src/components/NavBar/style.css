@@ -5,19 +5,6 @@
     font-family: "Overpass" !important;
 }
 
-.nav_ac {
-    padding: 5px 15px;
-    border: unset;
-    /* font-size: 1.25rem; */
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #fff !important;
-    line-height: 2;
-    height: 40px;
-    font-weight: bold;
-    z-index: 1000;
-    /* text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975; */
-}
-
 .myNavLink {
     text-decoration: none;
     position: relative;
@@ -83,7 +70,8 @@
 
     .class-nav-df-jc-ai {
         /* height: calc(100dvh - 50px); */
-        height: calc(100dvh - 81px);
+        /* height: calc(100dvh - 81px); */
+        height: calc(100dvh - 64px);
         /* background-color: var(--background-universal) !important; */
     }
 
@@ -96,10 +84,6 @@
     }
 }
 
-.cross>span {
-    background-image: url("../../../public/cross.svg");
-}
-
 /* .scrolled {
     backdrop-filter: blur(2px) !important;
 } */
@@ -108,7 +92,7 @@
     position: relative !important;
     background-color: transparent !important;
     border-color: transparent !important;
-    padding: 0 !important;
+    /* padding: 0 !important; */
 }
 
 .navbar-toggler:focus,
