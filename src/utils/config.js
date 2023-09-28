@@ -2,7 +2,7 @@ export const hashRoutes = [
     ["Home", "/home/#home"],
     ["About", "/home/#about"],
     ["Experience", "/home/#experience"],
-    // ["Projects", "/home/#projects"],
+    ["Projects", "/home/#projects"],
     ["Contact", "/home/#contact"],
     ["Resume", "/resume/resume.pdf"]
 ];
@@ -93,5 +93,38 @@ export const experiences = [
             "With the assistance of other coordinators, successfully organized events and guided sessions for students",
             'Speaker at "Tech-tonic" a programming road-map for freshers',
         ],
+    }
+];
+
+export const projectsData = [
+    {
+        title: 'Online-Judge',
+        desciption: 'Build a platform that remotely runs and compiles user submitted code for a programming problem securely and judges if the code is correct/wrong',
+        tech: ['Nodejs', 'React', 'Docker', 'Redis', 'MongoDB', 'Expressjs', 'JWT'],
+        github: 'https://github.com/Am4nn/Online-Judge-Project',
+        external: 'https://oj.amanarya.com',
+        image: '/projects/oj-front.png'
+    },
+    {
+        title: 'Portfolio',
+        desciption: 'Crafted an engaging portfolio site with ReactJS and Three.js, enhancing user interaction through a serverless feedback system powered by a custom API',
+        tech: ['Nodejs', 'React', 'Threejs', 'Nodemailer', 'MUI', 'Bootstrap', 'drei'],
+        github: 'https://github.com/Am4nn/Portfolio-Website',
+        external: 'https://www.amanarya.com',
+        image: '/projects/portfolio-front.png'
+    },
+    {
+        title: 'Draw-Graphs',
+        desciption: 'Designed a Java Swing app for user-friendly equation input and dynamic graph visualization, showcasing strong Java and GUI development skills',
+        tech: ['Java', 'Java-Swing', 'Java-Collections'],
+        github: 'https://github.com/Am4nn/Draw-Graphs',
+        image: '/projects/draw-graph-front.png'
+    },
+    {
+        title: 'Super-Mario',
+        desciption: "Designed and developed 'Super Mario', a captivating 2D game using C++ and the SFML, showcasing shader programming skills for visually stunning effects in the user interface",
+        tech: ['Cpp', 'SFML', 'Shader', 'Vector', 'CMake'],
+        github: 'https://github.com/Am4nn/Super-Mario-SFML',
+        image: '/projects/super-mario-front.png'
     }
 ];

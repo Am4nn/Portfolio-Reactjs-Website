@@ -1,0 +1,19 @@
+.project-image {
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: var(--transition);
+    background-color: hsl(215.68deg 64.91% 11.18%);
+}
+
+.project-image .img {
+    border-radius: 4px;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+    transition: filter 300ms ease-in-out;
+    filter: grayscale(100%) contrast(1) brightness(50%);
+}

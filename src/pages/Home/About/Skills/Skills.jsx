@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { skills } from '../../../../utils/config'
 import styles from './Skills.module.css';
+import LazyLoad from 'react-lazyload';
 
 const Skills = () => (
     <div className={styles.skills_wrapper}>
@@ -30,11 +31,13 @@ const SkillCategory = ({ name, items }) => (
     </div>
 );
 
-const SkillBubble = ({ name }) => (
+const SkillBubble = memo(({ name }) => (
     <div className={styles.skill_bubble_container}>
-        <img src={`/skills/` + name + `.svg`} alt={name} loading="lazy" />
+        <LazyLoad once height={41.46} className={styles.skill_img_container}>
+            <img src={`/skills/` + name + `.svg`} alt={name} loading="lazy" />
+        </LazyLoad>
         <h3>{name}</h3>
     </div>
-);
+));
 
 export default Skills;

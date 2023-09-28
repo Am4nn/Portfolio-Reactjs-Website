@@ -29,6 +29,12 @@
     flex-direction: column;
 }
 
+.skill_img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .skill_bubble_container>h3,
 .skill_title>h3 {
     font-family: 'Montserrat', sans-serif;

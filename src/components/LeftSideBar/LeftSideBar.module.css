@@ -41,16 +41,8 @@
 }
 
 .StyledSocialList li a {
-    --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
-
     padding: 10px;
-    font-size: var(--fz-xl);
+    font-size: var(20px);
     line-height: 1.3;
 
     transform: translateY(0px);

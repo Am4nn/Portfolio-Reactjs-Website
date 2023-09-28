@@ -1,0 +1,48 @@
+.projectGrid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+    .projectGrid {
+        gap: 2rem;
+    }
+}
+
+.projectGrid a {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.projectCard {
+    max-width: 570px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    border-radius: 5px;
+    border: 1px solid rgb(50, 50, 50, 0.30);
+    box-shadow: 0 0.5em 1.2em -0.125em rgba(50, 50, 50, 0.2);
+}
+
+.projectCard:hover,
+.projectCard:focus-visible {
+    box-shadow: 0 0.5em 1.2em -0.125em rgba(50, 50, 50, 0.4);
+}
+
+.projectCard:hover .backgroundImage>img {
+    /* transform: translateZ(-5px); try this */
+    filter: grayscale(0%) contrast(1) brightness(100%);
+}

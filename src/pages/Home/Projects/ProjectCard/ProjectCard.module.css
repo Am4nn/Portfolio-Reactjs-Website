@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.project-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 40px 30px;
+}
+
+@media (max-width: 480px) {
+    .project-content {
+        padding: 30px 25px 20px;
+    }
+}
+
+.project-overline {
+    margin: 10px 0;
+    color: #00e5ff;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.project-title {
+    color: var(--lightest-slate);
+    font-size: clamp(24px, 5vw, 28px);
+    margin: 0 0 20px;
+    color: #e6f1ff;
+}
+
+.project-title a {
+    position: static;
+}
+
+.project-description {
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+    background-color: var(--light-navy);
+    color: var(--light-slate);
+    font-size: 18px;
+    padding: 20px 0;
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+.project-description p {
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+.project-description a {
+    display: inline-block;
+    position: relative;
+    color: #00e5ff;
+    transition: var(--transition);
+}
+
+.project-description strong {
+    color: #e6f1ff;
+    font-weight: normal;
+}
+
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tech-list li {
+    margin: 0 10px 5px 0;
+    color: var(--lightest-slate);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    margin-left: -10px;
+    color: var(--lightest-slate);
+}
+
+.project-links a {
+    color: hsl(166, 100%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.project-title:hover,
+.project-title:focus,
+.project-links a:hover,
+.project-links a:focus-visible {
+    color: hsl(345, 100%, 85%);
+}
+
+.project-links a.external svg {
+    width: 22px;
+    height: 22px;
+    margin-top: -4px;
+}
+
+.project-links a svg {
+    width: 20px;
+    height: 20px;
+}
