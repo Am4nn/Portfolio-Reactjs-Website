@@ -4,7 +4,7 @@ export const hashRoutes = [
     ["Experience", "/home/#experience"],
     ["Projects", "/home/#projects"],
     ["Contact", "/home/#contact"],
-    ["Resume", "/resume/resume.pdf"]
+    ["Resume", "/resume.pdf"]
 ];
 
 export const sections = hashRoutes.map(route => route[0].toLowerCase());
