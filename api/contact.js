@@ -1,7 +1,8 @@
 const nodemailer = require('nodemailer');
+const { MongoClient } = require('mongodb');
 
 const mailTempltePlainText = ({ email, message }) => `${email}: ${message}`;
-const mailTemplateHTML = ({ email, message }) => `<h3><b>Email: ${email}</b></h3> <br> <div>Message: ${message}</div>`;
+const mailTemplateHTML = ({ email, message }) => `<h3><b>Email: ${email}</b></h3> <br> <div><b>Message:</b> ${message}</div>`;
 
 const sendMessageToMe = async ({ email, message }) => {
 
@@ -31,22 +32,75 @@ const sendMessageToMe = async ({ email, message }) => {
     })
 }
 
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    timeZone: 'Asia/Kolkata', // India time zone
+    timeZoneName: 'short',
+});
+
+const url = process.env.MONGO_URL;
+const dbName = process.env.MONGO_DB;
+const MONGO_MAIL_COLLECTION = process.env.MONGO_MAIL_COLLECTION;
+const MONGO_ERROR_COLLECTION = process.env.MONGO_ERROR_COLLECTION;
+let client = null;
+
+const connectDB = async () => {
+    try {
+        client = new MongoClient(url);
+        await client.connect();
+    } catch (error) {
+        client = null;
+        console.error(error);
+    }
+}
+
+const logger = async (data, collectionName) => {
+    try {
+        if (client) {
+            await client.db(dbName).collection(collectionName).insertOne({
+                ...data,
+                date: dateFormatter.format(new Date()),
+                timestamp: new Date()
+            });
+        } else {
+            console.log(data);
+        }
+    } catch (error) {
+        console.error(error, data);
+    }
+}
+
+process.on('SIGINT', async () => {
+    if (client)
+        await client.close();
+    process.exit(0);
+});
+
 // ##############################################################################
 
 export default async function handler(request, response) {
 
+    await connectDB();
+
     if (request.method === "POST") {
         const { email, message } = request.body;
         try {
-            console.log("Sending Mail: ", { email, message });
+            await logger({ email, message }, MONGO_MAIL_COLLECTION);
+
             const sendStatusRes = await sendMessageToMe({ email, message });
             if (sendStatusRes.rejected.length > 0) {
-                console.error("Mail Rejected: ", sendStatusRes);
+                await logger({ msg: "Mail Rejected", sendStatusRes }, MONGO_ERROR_COLLECTION);
                 return response.status(500).json("Mail Rejected");
             }
             return response.status(200).json("Thank you for contacting me. I will get back to you as soon as possible!");
         } catch (error) {
-            console.error("Internal Server Error: ", error);
+            await logger({ msg: "Internal Server Error", error }, MONGO_ERROR_COLLECTION);
             return response.status(500).json(error || "Internal Server Error");
         }
 
