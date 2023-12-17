@@ -5,6 +5,8 @@ import ScrollUpBtn from './components/ScrollUpBtn/ScrollUpBtn';
 import NavigationStack from './components/NavigationStack/NavigationStack';
 import StateProvider from './context/state';
 
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import './global.css';
 import './transitions.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,6 +18,7 @@ const App = () => {
                 <NavBar />
                 <ScrollUpBtn />
                 <NavigationStack />
+                <SpeedInsights />
             </StateProvider>
         </BrowserRouter>
     );
