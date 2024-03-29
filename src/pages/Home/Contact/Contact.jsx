@@ -3,9 +3,10 @@ import styles from './Contact.module.css';
 import SectionHeading from '../../../components/SectionHeading/SectionHeading';
 import EarthCanvas from '../../../components/EarthCanvas/EarthCanvas';
 import Form from './Form/Form';
-import StarsCanvas from '../../../components/StarCanvas/StarCanvas';
+import StarBackgroundImage from './StarBackgroundImage/StarBackgroundImage';
+// import StarsCanvas from '../../../components/StarCanvas/StarCanvas';
 
-const Contact = () => {
+const Contact = ({ children }) => {
     return (
         <section id="contact" className={styles.contact}>
             <SectionHeading
@@ -16,7 +17,9 @@ const Contact = () => {
                 <Form className={styles.dsizeF} />
                 <EarthCanvas className={styles.dsizeE} />
             </div>
-            <StarsCanvas />
+            {/* <StarsCanvas /> */}
+            <StarBackgroundImage />
+            {children}
         </section>
     )
 }

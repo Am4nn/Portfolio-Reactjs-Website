@@ -1,0 +1,10 @@
+.contactImage {
+    z-index: -1;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: var(--transition);
+}

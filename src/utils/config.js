@@ -128,3 +128,8 @@ export const projectsData = [
         image: '/projects/super-mario-front.png'
     }
 ];
+
+export const contactData = {
+    imagesrc: '/stars/StarBackground.png',
+    imagealt: 'Star Background Image',
+};

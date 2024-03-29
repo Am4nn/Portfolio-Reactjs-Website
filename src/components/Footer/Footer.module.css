@@ -10,7 +10,8 @@
     width: 100%;
     flex-wrap: wrap;
     position: relative;
-    padding: 64px 24px 32px 24px;
+    /* padding: 64px 24px 32px 24px; */
+    padding: 0px 24px 32px 24px;
     font-size: 0.875rem;
     font-family: gotham-light;
 }
