@@ -32,11 +32,11 @@
     list-style: none;
 }
 
-.StyledSocialList li:last-of-type {
+.StyledSocialList li:first-of-type {
     margin-bottom: 20px;
 }
 
-.StyledSocialList li:first-of-type {
+.StyledSocialList li:last-of-type {
     margin-top: 20px;
 }
 

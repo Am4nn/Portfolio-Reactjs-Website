@@ -7,7 +7,7 @@ const ProjectCard = ({ data }) => (
         <p className={styles["project-overline"]}>Featured Project</p>
 
         <h3 className={styles["project-title"]}>
-            <a href={data.external} aria-label={`${data.title} Title Link`} target="_blank" rel="noreferrer">
+            <a href={data.external || data.github} aria-label={`${data.title} Title Link`} target="_blank" rel="noreferrer">
                 {data.title}
             </a>
         </h3>

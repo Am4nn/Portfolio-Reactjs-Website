@@ -36,11 +36,14 @@ const SocialSideBar = () => {
                 <TransitionGroup component={null}>
                     {isMounted && socialMediaDetails && [{}, ...socialMediaDetails, {}].map(({ url, name }, i) => (
                         <CSSTransition mountOnEnter={false} key={`icon-transition-element-${i}`} classNames={animationClass} timeout={loaderDelay}>
-                            {url ? <li style={{ transitionDelay: `${i + 1}00ms` }} key={`icon-li-${i}`}>
-                                <a href={url} aria-label={name} target="_blank" rel="noreferrer">
-                                    <Icon name={name} />
-                                </a>
-                            </li> : <div className={styles.bar} style={{ transitionDelay: `${i + 1}00ms` }} />}
+                            <li style={{ transitionDelay: `${i + 1}00ms` }} key={`icon-li-${i}`}>
+                                {url ?
+                                    <a href={url} aria-label={name} target="_blank" rel="noreferrer">
+                                        <Icon name={name} />
+                                    </a>
+                                    : <div className={styles.bar} style={{ transitionDelay: `${i + 1}00ms` }} />
+                                }
+                            </li>
                         </CSSTransition>
                     ))}
                 </TransitionGroup>

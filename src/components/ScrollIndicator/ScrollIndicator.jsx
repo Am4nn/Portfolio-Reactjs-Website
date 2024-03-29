@@ -30,8 +30,9 @@ const ScrollIndicator = ({ mountDelay, href }) => {
             className={styles.scrollIndicator}
             data-hidden={scrollIndicatorIsMount ? scrollIndicatorHidden : 'true'}
             href={href}
+            aria-label="Scroll to next section"
         >
-            scrollIndicator
+            Scroll Indicator
         </a>
     )
 }

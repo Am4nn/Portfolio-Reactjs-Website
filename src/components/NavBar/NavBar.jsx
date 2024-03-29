@@ -106,7 +106,7 @@ const NavBar = () => {
 }
 
 const Brand = () => (
-    <Navbar.Brand href="/" className="d-flex">
+    <Navbar.Brand href="/" className="d-flex" aria-label="Logo">
         <Logo />
     </Navbar.Brand>
 );
