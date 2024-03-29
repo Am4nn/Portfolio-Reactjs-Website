@@ -6,6 +6,7 @@ import NavigationStack from './components/NavigationStack/NavigationStack';
 import StateProvider from './context/state';
 
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 import './global.css';
 import './transitions.css';
@@ -19,6 +20,7 @@ const App = () => {
                 <ScrollUpBtn />
                 <NavigationStack />
                 <SpeedInsights />
+                <Analytics />
             </StateProvider>
         </BrowserRouter>
     );
