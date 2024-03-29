@@ -28,9 +28,9 @@ const Home = () => {
                 <About />
                 <Experience />
                 <Projects />
-                <Contact>
-                    <Footer />
-                </Contact>
+                {/* <Contact>
+                </Contact> */}
+                <Footer />
             </main>
         </Fragment>
     )
