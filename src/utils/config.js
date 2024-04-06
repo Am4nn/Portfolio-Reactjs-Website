@@ -1,9 +1,9 @@
 export const hashRoutes = [
-    ["Home", "/home/#home"],
-    ["About", "/home/#about"],
-    ["Experience", "/home/#experience"],
-    ["Projects", "/home/#projects"],
-    ["Contact", "/home/#contact"],
+    ["Home", "/#home"],
+    ["About", "/#about"],
+    ["Experience", "/#experience"],
+    ["Projects", "/#projects"],
+    ["Contact", "/#contact"],
     ["Resume", "/resume.pdf"]
 ];
 
