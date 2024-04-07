@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import styles from './ScrollUpBtn.module.css';
 
-const ScrollUpBtn = props => {
-
-    const { element } = props;
+const ScrollUpBtn = ({ element }) => {
 
     const [atTop, setAtTop] = useState(true);
-
 
     const scrollHandler = () => {
         if (element) element.scrollTo(0, 0);
@@ -37,4 +34,4 @@ const ScrollUpBtn = props => {
     )
 }
 
-export default ScrollUpBtn
+export default ScrollUpBtn;
