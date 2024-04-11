@@ -1,6 +1,8 @@
 # Portfolio Website - Aman Arya
 
-Welcome to my portfolio website built with ReactJS, Three.js, and hosted on Vercel with a custom domain [amanarya.com](https://www.amanarya.com)
+<b>Visit [Am4nn/Portfolio-Nextjs-Website](https://github.com/Am4nn/Portfolio-Nextjs-Website) github repository for the updated portfolio made using Nextjs:14 </b>
+
+Welcome to my portfolio website built with ReactJS, Three.js, and hosted on Vercel with a custom domain [react.amanarya.com](https://react.amanarya.com)
 
 ![Portfolio Screenshot](public/preview.png)
 
@@ -10,7 +12,7 @@ This project showcases my portfolio and allows visitors to view my work and send
 
 ## Live Demo
 
-You can see the live demo of this project at [https://www.amanarya.com](https://www.amanarya.com)
+You can see the live demo of this project at [https://react.amanarya.com](https://react.amanarya.com)
 
 ## Installation
 
@@ -50,7 +52,7 @@ To run this project locally, follow these steps:
 
 - Serverless API: The website uses a serverless function hosted on Vercel to handle form submissions and send emails using Nodemailer
 
-- Custom Domain: The portfolio is hosted on a custom domain, [amanarya.com](https://www.amanarya.com)
+- Custom Domain: The portfolio is hosted on a custom domain, [react.amanarya.com](https://react.amanarya.com)
 
 ## Contact
 
